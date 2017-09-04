@@ -29,6 +29,7 @@ class PlayState extends FlxState
 	
 	override public function create():Void
 	{
+		super.create();
 		
 		if (FlxG.sound.music == null)
 		{
@@ -86,7 +87,7 @@ class PlayState extends FlxState
 		
 		
 		
-		super.create();
+		
 	}
 
 	override public function update(elapsed:Float):Void
@@ -106,6 +107,7 @@ class PlayState extends FlxState
 			_jill.visible = false;
 			_zombie.visible = false;
 			_ded.visible = true;
+			_zombie.x += 200;
 			_ded.x = _jill.x - 12;
 			_ded.y = _jill.y;
 			

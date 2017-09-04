@@ -42,10 +42,11 @@ class GameOverState extends FlxState
 		_IDIOT.screenCenter(FlxAxes.X);
 		*/
 		_FAGGOT = new FlxText(0, 0, 0, "FAGGOT", 20);
+		_FAGGOT.color = Colors.gb0;
 		_FAGGOT.screenCenter();
 		
 		
-		
+		bgColor = Colors.gb3;
 		
 		FlxG.fixedTimestep = false;
 		
@@ -116,7 +117,7 @@ class GameOverState extends FlxState
 		{
 			//What happens when the final sound/timer time passes
 			//change parameters to whatever you feel like
-			FlxG.camera.fade(FlxColor.BLACK, 0.4, false, finishTween);
+			FlxG.camera.fade(Colors.gb3, 0.4, false, finishTween);
 		}
 	}
 	
