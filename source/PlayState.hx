@@ -3,22 +3,49 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import flixel.effects.particles.FlxEmitter;
 import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
+import flixel.util.FlxColor;
+import flixel.util.FlxTimer;
 
 class PlayState extends FlxState
 {
 	private var _jill:Jill;
+	private var _ded:FlxSprite;
 	private var _wall:Wall;
+	private var _zombie:Zombie;
+	
+	private var _deathTimer:Float = 1.8;
+	private var _blood:FlxEmitter;
 	
 	override public function create():Void
 	{
 		FlxG.camera.antialiasing = true;
 		
+		_zombie = new Zombie(20, 44);
+		add(_zombie);
+		
+		
 		_jill = new Jill(90, 44);
 		add(_jill);
+		
+		_ded = new FlxSprite(0, 0);
+		_ded.loadGraphic("assets/images/zombieBite.png", false, 91, 102);
+		add(_ded);
+		_ded.visible = false;
+		
+		_blood = new FlxEmitter(0, 0);
+		_blood.makeParticles(3, 3, FlxColor.RED, 50);
+		
+		add(_blood);
+		
+		_blood.acceleration.start.min.y = 800;
+		_blood.velocity.set( -10, 15, 10, 24);
+		
+		
 		
 		_wall = new Wall(_jill.x + _jill.width + 4, 0);
 		add(_wall);
@@ -28,16 +55,36 @@ class PlayState extends FlxState
 		FlxG.camera.targetOffset.x = -35;
 		FlxG.camera.deadzone.x = 20;
 		
+		FlxG.worldBounds.x = FlxG.width * 20;
+		
 		super.create();
 	}
 
 	override public function update(elapsed:Float):Void
 	{
 		FlxG.watch.addMouse();
-		
+		FlxG.watch.add(_jill, "x");
 		if (FlxG.keys.justPressed.Z)
 		{
 			hitwall();
+		}
+		
+		if (FlxG.overlap(_jill, _zombie))
+		{
+			_jill.visible = false;
+			_zombie.visible = false;
+			_ded.visible = true;
+			_ded.x = _jill.x - 10;
+			_ded.y = _jill.y;
+			
+			_blood.setPosition(_jill.x + 10, _jill.y + 20);
+			_blood.start(false, 0.02, 50);
+			
+			_deathTimer -= FlxG.elapsed;
+			if (_deathTimer <= 0)
+			{
+				FlxG.switchState(new GameOverState());
+			}
 		}
 		
 		super.update(elapsed);

@@ -58,6 +58,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -69,14 +91,58 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/images/gameover.png", __ASSET__assets_images_gameover_png);
+		type.set ("assets/images/gameover.png", AssetType.IMAGE);
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
+		className.set ("assets/images/jill.png", __ASSET__assets_images_jill_png);
+		type.set ("assets/images/jill.png", AssetType.IMAGE);
+		className.set ("assets/images/jillidle.aseprite", __ASSET__assets_images_jillidle_aseprite);
+		type.set ("assets/images/jillidle.aseprite", AssetType.BINARY);
+		className.set ("assets/images/jillidle.png", __ASSET__assets_images_jillidle_png);
+		type.set ("assets/images/jillidle.png", AssetType.IMAGE);
+		className.set ("assets/images/jillwall.png", __ASSET__assets_images_jillwall_png);
+		type.set ("assets/images/jillwall.png", AssetType.IMAGE);
+		className.set ("assets/images/title.png", __ASSET__assets_images_title_png);
+		type.set ("assets/images/title.png", AssetType.IMAGE);
+		className.set ("assets/images/zombie.png", __ASSET__assets_images_zombie_png);
+		type.set ("assets/images/zombie.png", AssetType.IMAGE);
+		className.set ("assets/images/zombieBite.png", __ASSET__assets_images_zombiebite_png);
+		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/sounds/gameOver.mp3", __ASSET__assets_sounds_gameover_mp3);
 		type.set ("assets/sounds/gameOver.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/jillBounce.mp3", __ASSET__assets_sounds_jillbounce_mp3);
+		type.set ("assets/sounds/jillBounce.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
+		className.set ("assets/sounds/Video Game Pack/8 bit blood.wav", __ASSET__assets_sounds_video_game_pack_8_bit_blood_wav);
+		type.set ("assets/sounds/Video Game Pack/8 bit blood.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/8 bit bump.wav", __ASSET__assets_sounds_video_game_pack_8_bit_bump_wav);
+		type.set ("assets/sounds/Video Game Pack/8 bit bump.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/8 bit laser.wav", __ASSET__assets_sounds_video_game_pack_8_bit_laser_wav);
+		type.set ("assets/sounds/Video Game Pack/8 bit laser.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/8 bit machine gun.wav", __ASSET__assets_sounds_video_game_pack_8_bit_machine_gun_wav);
+		type.set ("assets/sounds/Video Game Pack/8 bit machine gun.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/8bit Explosion Sound Effects Retro Games Soundholder.wav", __ASSET__assets_sounds_video_game_pack_8bit_explosion_sound_effects_retro_games_soundholder_wav);
+		type.set ("assets/sounds/Video Game Pack/8bit Explosion Sound Effects Retro Games Soundholder.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/game fuzz.wav", __ASSET__assets_sounds_video_game_pack_game_fuzz_wav);
+		type.set ("assets/sounds/Video Game Pack/game fuzz.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/GAME OVER.wav", __ASSET__assets_sounds_video_game_pack_game_over_wav);
+		type.set ("assets/sounds/Video Game Pack/GAME OVER.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/GBC pain.wav", __ASSET__assets_sounds_video_game_pack_gbc_pain_wav);
+		type.set ("assets/sounds/Video Game Pack/GBC pain.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/GBC scream.wav", __ASSET__assets_sounds_video_game_pack_gbc_scream_wav);
+		type.set ("assets/sounds/Video Game Pack/GBC scream.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/konami pause.wav", __ASSET__assets_sounds_video_game_pack_konami_pause_wav);
+		type.set ("assets/sounds/Video Game Pack/konami pause.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/Resident Evil GBC Music cut.wav", __ASSET__assets_sounds_video_game_pack_resident_evil_gbc_music_cut_wav);
+		type.set ("assets/sounds/Video Game Pack/Resident Evil GBC Music cut.wav", AssetType.SOUND);
+		className.set ("assets/sounds/Video Game Pack/Zombie moan.wav", __ASSET__assets_sounds_video_game_pack_zombie_moan_wav);
+		type.set ("assets/sounds/Video Game Pack/Zombie moan.wav", AssetType.SOUND);
+		className.set ("assets/sounds/video-game-pack.zip", __ASSET__assets_sounds_video_game_pack_zip);
+		type.set ("assets/sounds/video-game-pack.zip", AssetType.BINARY);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -98,10 +164,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/images/gameover.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/images-go-here.txt";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/images/jill.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/jillidle.aseprite";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/jillidle.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/jillwall.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/title.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/zombie.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/zombieBite.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		
@@ -110,10 +208,66 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/jillBounce.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/sounds-go-here.txt";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/sounds/Video Game Pack/8 bit blood.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/8 bit bump.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/8 bit laser.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/8 bit machine gun.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/8bit Explosion Sound Effects Retro Games Soundholder.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/game fuzz.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/GAME OVER.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/GBC pain.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/GBC scream.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/konami pause.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/Resident Evil GBC Music cut.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/Video Game Pack/Zombie moan.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/video-game-pack.zip";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "flixel/sounds/beep.ogg";
 		path.set (id, id);
 		
@@ -159,8 +313,32 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
 		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
 		
+		className.set ("assets/images/gameover.png", __ASSET__assets_images_gameover_png);
+		type.set ("assets/images/gameover.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/images/jill.png", __ASSET__assets_images_jill_png);
+		type.set ("assets/images/jill.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/jillidle.aseprite", __ASSET__assets_images_jillidle_aseprite);
+		type.set ("assets/images/jillidle.aseprite", AssetType.BINARY);
+		
+		className.set ("assets/images/jillidle.png", __ASSET__assets_images_jillidle_png);
+		type.set ("assets/images/jillidle.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/jillwall.png", __ASSET__assets_images_jillwall_png);
+		type.set ("assets/images/jillwall.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/title.png", __ASSET__assets_images_title_png);
+		type.set ("assets/images/title.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/zombie.png", __ASSET__assets_images_zombie_png);
+		type.set ("assets/images/zombie.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/zombieBite.png", __ASSET__assets_images_zombiebite_png);
+		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
 		
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
@@ -168,8 +346,50 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/sounds/gameOver.mp3", __ASSET__assets_sounds_gameover_mp3);
 		type.set ("assets/sounds/gameOver.mp3", AssetType.MUSIC);
 		
+		className.set ("assets/sounds/jillBounce.mp3", __ASSET__assets_sounds_jillbounce_mp3);
+		type.set ("assets/sounds/jillBounce.mp3", AssetType.MUSIC);
+		
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/sounds/Video Game Pack/8 bit blood.wav", __ASSET__assets_sounds_video_game_pack_8_bit_blood_wav);
+		type.set ("assets/sounds/Video Game Pack/8 bit blood.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/8 bit bump.wav", __ASSET__assets_sounds_video_game_pack_8_bit_bump_wav);
+		type.set ("assets/sounds/Video Game Pack/8 bit bump.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/8 bit laser.wav", __ASSET__assets_sounds_video_game_pack_8_bit_laser_wav);
+		type.set ("assets/sounds/Video Game Pack/8 bit laser.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/8 bit machine gun.wav", __ASSET__assets_sounds_video_game_pack_8_bit_machine_gun_wav);
+		type.set ("assets/sounds/Video Game Pack/8 bit machine gun.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/8bit Explosion Sound Effects Retro Games Soundholder.wav", __ASSET__assets_sounds_video_game_pack_8bit_explosion_sound_effects_retro_games_soundholder_wav);
+		type.set ("assets/sounds/Video Game Pack/8bit Explosion Sound Effects Retro Games Soundholder.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/game fuzz.wav", __ASSET__assets_sounds_video_game_pack_game_fuzz_wav);
+		type.set ("assets/sounds/Video Game Pack/game fuzz.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/GAME OVER.wav", __ASSET__assets_sounds_video_game_pack_game_over_wav);
+		type.set ("assets/sounds/Video Game Pack/GAME OVER.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/GBC pain.wav", __ASSET__assets_sounds_video_game_pack_gbc_pain_wav);
+		type.set ("assets/sounds/Video Game Pack/GBC pain.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/GBC scream.wav", __ASSET__assets_sounds_video_game_pack_gbc_scream_wav);
+		type.set ("assets/sounds/Video Game Pack/GBC scream.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/konami pause.wav", __ASSET__assets_sounds_video_game_pack_konami_pause_wav);
+		type.set ("assets/sounds/Video Game Pack/konami pause.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/Resident Evil GBC Music cut.wav", __ASSET__assets_sounds_video_game_pack_resident_evil_gbc_music_cut_wav);
+		type.set ("assets/sounds/Video Game Pack/Resident Evil GBC Music cut.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/Video Game Pack/Zombie moan.wav", __ASSET__assets_sounds_video_game_pack_zombie_moan_wav);
+		type.set ("assets/sounds/Video Game Pack/Zombie moan.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/video-game-pack.zip", __ASSET__assets_sounds_video_game_pack_zip);
+		type.set ("assets/sounds/video-game-pack.zip", AssetType.BINARY);
 		
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
@@ -834,10 +1054,32 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if flash
 
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_gameover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_jill_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_jillidle_aseprite extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_jillidle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_jillwall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_title_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_zombie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_zombiebite_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_gameover_mp3 extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_jillbounce_mp3 extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_blood_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_bump_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_laser_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_machine_gun_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_8bit_explosion_sound_effects_retro_games_soundholder_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_game_fuzz_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_game_over_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_gbc_pain_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_gbc_scream_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_konami_pause_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_resident_evil_gbc_music_cut_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_zombie_moan_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_zip extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -847,6 +1089,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -869,10 +1133,32 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.Bytes {}
+@:image("assets/images/gameover.png") #if display private #end class __ASSET__assets_images_gameover_png extends lime.graphics.Image {}
 @:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.Bytes {}
+@:image("assets/images/jill.png") #if display private #end class __ASSET__assets_images_jill_png extends lime.graphics.Image {}
+@:file("assets/images/jillidle.aseprite") #if display private #end class __ASSET__assets_images_jillidle_aseprite extends lime.utils.Bytes {}
+@:image("assets/images/jillidle.png") #if display private #end class __ASSET__assets_images_jillidle_png extends lime.graphics.Image {}
+@:image("assets/images/jillwall.png") #if display private #end class __ASSET__assets_images_jillwall_png extends lime.graphics.Image {}
+@:image("assets/images/title.png") #if display private #end class __ASSET__assets_images_title_png extends lime.graphics.Image {}
+@:image("assets/images/zombie.png") #if display private #end class __ASSET__assets_images_zombie_png extends lime.graphics.Image {}
+@:image("assets/images/zombieBite.png") #if display private #end class __ASSET__assets_images_zombiebite_png extends lime.graphics.Image {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/sounds/gameOver.mp3") #if display private #end class __ASSET__assets_sounds_gameover_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/jillBounce.mp3") #if display private #end class __ASSET__assets_sounds_jillbounce_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/8 bit blood.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_blood_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/8 bit bump.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_bump_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/8 bit laser.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_laser_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/8 bit machine gun.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_machine_gun_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/8bit Explosion Sound Effects Retro Games Soundholder.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_8bit_explosion_sound_effects_retro_games_soundholder_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/game fuzz.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_game_fuzz_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/GAME OVER.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_game_over_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/GBC pain.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_gbc_pain_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/GBC scream.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_gbc_scream_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/konami pause.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_konami_pause_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/Resident Evil GBC Music cut.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_resident_evil_gbc_music_cut_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/Video Game Pack/Zombie moan.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_zombie_moan_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/video-game-pack.zip") #if display private #end class __ASSET__assets_sounds_video_game_pack_zip extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.Bytes {}
 @:font("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
