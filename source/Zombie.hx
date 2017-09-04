@@ -15,9 +15,13 @@ class Zombie extends FlxSprite
 	public function new(?X:Float=0, ?Y:Float=0) 
 	{
 		super(X, Y);
-		loadGraphic("assets/images/zombie.png", false, 78, 105);
-		acceleration.x = 2;
+		loadGraphic("assets/images/zombie.png", true, 88, 105);
+		animation.add("walk", [0, 1], 2);
+		animation.play("walk");
+		acceleration.x = 4;
+		maxVelocity.x = 50;
 		FlxTween.tween(this, {y: this.y + 5}, 0.025, {type:FlxTween.PINGPONG, loopDelay: 0.4});
+		
 		width = 30;
 		
 	}

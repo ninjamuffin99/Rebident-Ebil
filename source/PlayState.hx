@@ -18,8 +18,11 @@ class PlayState extends FlxState
 	private var _wall:Wall;
 	private var _zombie:Zombie;
 	
-	private var _deathTimer:Float = 1.8;
+	private var _bustedWalls:Int = 0;
+	
+	private var _deathTimer:Float = 1.4;
 	private var _blood:FlxEmitter;
+	private var _justDied:Bool = false;
 	
 	override public function create():Void
 	{
@@ -42,7 +45,10 @@ class PlayState extends FlxState
 		
 		add(_blood);
 		
-		_blood.acceleration.start.min.y = 800;
+		_blood.acceleration.start.min.y = 900;
+		_blood.acceleration.start.max.y = 900;
+		_blood.acceleration.end.min.y = 900;
+		_blood.acceleration.end.max.y = 900;
 		_blood.velocity.set( -10, 15, 10, 24);
 		
 		
@@ -55,7 +61,7 @@ class PlayState extends FlxState
 		FlxG.camera.targetOffset.x = -35;
 		FlxG.camera.deadzone.x = 20;
 		
-		FlxG.worldBounds.x = FlxG.width * 20;
+		FlxG.worldBounds.set(0, 0, FlxG.width * 60, FlxG.height);
 		
 		super.create();
 	}
@@ -74,11 +80,17 @@ class PlayState extends FlxState
 			_jill.visible = false;
 			_zombie.visible = false;
 			_ded.visible = true;
-			_ded.x = _jill.x - 10;
+			_ded.x = _jill.x - 12;
 			_ded.y = _jill.y;
 			
-			_blood.setPosition(_jill.x + 10, _jill.y + 20);
-			_blood.start(false, 0.02, 50);
+			if (!_justDied)
+			{
+				FlxG.sound.play("assets/sounds/Video Game Pack/GBC scream.wav");
+				_blood.setPosition(_jill.x + 28, _jill.y + 37);
+				_blood.start(false, 0.02, 50);
+				_justDied = true;
+			}
+			
 			
 			_deathTimer -= FlxG.elapsed;
 			if (_deathTimer <= 0)
@@ -96,6 +108,8 @@ class PlayState extends FlxState
 		_wall.alpha -= 0.1;
 		if (_wall.health <= 0)
 		{
+			_bustedWalls += 1;
+			FlxG.log.add(_bustedWalls);
 			_newWall();
 		}
 	}
@@ -105,6 +119,7 @@ class PlayState extends FlxState
 		FlxG.log.add("new wall");
 		_wall.x += FlxG.width;
 		_wall.alpha = 1;
+		_wall.health = 1 * _bustedWalls;
 		FlxTween.tween(_jill, {x: _jill.x + FlxG.width});
 	}
 }
