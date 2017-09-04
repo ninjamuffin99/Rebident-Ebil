@@ -34,11 +34,12 @@ class Jill extends FlxSprite
 		
 		if (FlxG.keys.justPressed.X)
 		{
-			velocity.x += 20;
+			velocity.x += 15;
+			FlxG.sound.play("assets/sounds/Video Game Pack/8 bit bump.wav");
 			if (_up)
 				y += 8;
 			else
-				y -= 9;
+				y -= 8;
 			_up = !_up;
 		}
 		

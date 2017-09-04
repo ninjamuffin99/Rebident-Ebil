@@ -19,7 +19,7 @@ class Zombie extends FlxSprite
 		animation.add("walk", [0, 1], 2);
 		animation.play("walk");
 		acceleration.x = 4;
-		maxVelocity.x = 50;
+		maxVelocity.x = 60;
 		FlxTween.tween(this, {y: this.y + 5}, 0.025, {type:FlxTween.PINGPONG, loopDelay: 0.4});
 		
 		
