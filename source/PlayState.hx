@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.effects.particles.FlxEmitter;
+import flixel.math.FlxRect;
 import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
 import flixel.ui.FlxButton;
@@ -81,7 +82,7 @@ class PlayState extends FlxState
 		FlxG.camera.targetOffset.x = -35;
 		FlxG.camera.deadzone.x = 20;
 		
-		FlxG.worldBounds.set(0, 0, FlxG.width * 60, FlxG.height);
+		FlxG.worldBounds.set(0, -10, 160 * 60, FlxG.height + 20);
 		
 		
 		
@@ -95,7 +96,7 @@ class PlayState extends FlxState
 		
 		FlxG.collide(_jill, _wall);
 		
-		if (FlxG.keys.justPressed.Z)
+		if (FlxG.keys.justPressed.Z && !_justDied)
 		{
 			hitwall();
 		}
@@ -135,6 +136,7 @@ class PlayState extends FlxState
 	public function hitwall():Void
 	{
 		_wall.health -= 0.1;
+		
 		_wall.alpha -= 0.1 / (1 * (_bustedWalls/2));
 		if (_wall.health <= 0)
 		{
@@ -151,6 +153,7 @@ class PlayState extends FlxState
 		_wall.alpha = 1;
 		_wall.health = 1 * (_bustedWalls/2);
 		//FlxTween.tween(_jill, {x: _jill.x + FlxG.width}, 1);
+		_wall.updateHitbox();
 	}
 	
 }

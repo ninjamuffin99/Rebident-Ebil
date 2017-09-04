@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxG;
+import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 
@@ -10,13 +11,14 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
  */
 class Wall extends FlxSprite 
 {
+	public var _health:Float;
 
 	public function new(?X:Float=0, ?Y:Float=0) 
 	{
 		super(X, Y);
 		makeGraphic(20, FlxG.height);
 		immovable = true;
-		health = 1;
+		_health = 1;
 	}
 	
 }

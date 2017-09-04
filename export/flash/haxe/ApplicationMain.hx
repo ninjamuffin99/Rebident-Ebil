@@ -154,6 +154,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
+		urls.push ("assets/sounds/walk.wav");
+		types.push (lime.Assets.AssetType.SOUND);
+		
+		
 		urls.push ("flixel/sounds/beep.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -239,7 +243,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "230",
+			build: "259",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

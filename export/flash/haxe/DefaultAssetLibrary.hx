@@ -84,6 +84,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -155,6 +156,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/Video Game Pack/Zombie moan.wav", AssetType.SOUND);
 		className.set ("assets/sounds/video-game-pack.zip", __ASSET__assets_sounds_video_game_pack_zip);
 		type.set ("assets/sounds/video-game-pack.zip", AssetType.BINARY);
+		className.set ("assets/sounds/walk.wav", __ASSET__assets_sounds_walk_wav);
+		type.set ("assets/sounds/walk.wav", AssetType.SOUND);
 		className.set ("flixel/sounds/beep.mp3", __ASSET__flixel_sounds_beep_mp3);
 		type.set ("flixel/sounds/beep.mp3", AssetType.MUSIC);
 		className.set ("flixel/sounds/flixel.mp3", __ASSET__flixel_sounds_flixel_mp3);
@@ -296,6 +299,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
+		id = "assets/sounds/walk.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "flixel/sounds/beep.mp3";
 		path.set (id, id);
 		
@@ -430,6 +437,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/sounds/video-game-pack.zip", __ASSET__assets_sounds_video_game_pack_zip);
 		type.set ("assets/sounds/video-game-pack.zip", AssetType.BINARY);
+		
+		className.set ("assets/sounds/walk.wav", __ASSET__assets_sounds_walk_wav);
+		type.set ("assets/sounds/walk.wav", AssetType.SOUND);
 		
 		className.set ("flixel/sounds/beep.mp3", __ASSET__flixel_sounds_beep_mp3);
 		type.set ("flixel/sounds/beep.mp3", AssetType.MUSIC);
@@ -1124,6 +1134,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_resident_evil_gbc_music_cut_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_zombie_moan_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_zip extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_walk_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends flash.text.Font { }
@@ -1133,6 +1144,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 
@@ -1211,6 +1223,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/sounds/Video Game Pack/Resident Evil GBC Music cut.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_resident_evil_gbc_music_cut_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/Video Game Pack/Zombie moan.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_zombie_moan_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/video-game-pack.zip") #if display private #end class __ASSET__assets_sounds_video_game_pack_zip extends lime.utils.Bytes {}
+@:file("assets/sounds/walk.wav") #if display private #end class __ASSET__assets_sounds_walk_wav extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/beep.mp3") #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/flixel.mp3") #if display private #end class __ASSET__flixel_sounds_flixel_mp3 extends lime.utils.Bytes {}
 @:font("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}

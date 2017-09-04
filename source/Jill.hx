@@ -26,6 +26,7 @@ class Jill extends FlxSprite
 	}
 	override public function update(elapsed:Float):Void 
 	{
+		
 		if (FlxG.keys.justPressed.A)
 		{
 			FlxG.camera.antialiasing = !FlxG.camera.antialiasing;
@@ -35,7 +36,7 @@ class Jill extends FlxSprite
 		if (FlxG.keys.justPressed.X)
 		{
 			velocity.x += 15;
-			FlxG.sound.play("assets/sounds/Video Game Pack/8 bit bump.wav");
+			FlxG.sound.play("assets/sounds/walk.wav");
 			if (_up)
 				y += 8;
 			else
