@@ -11,6 +11,8 @@ import flixel.math.FlxMath;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 
+import com.newgrounds.*;
+
 class PlayState extends FlxState
 {
 	private var _jill:Jill;
@@ -85,6 +87,11 @@ class PlayState extends FlxState
 			
 			if (!_justDied)
 			{
+				if (_bustedWalls < 1)
+				{
+					API.unlockMedal("Wow Jill, you suck at this game!");
+				}
+				
 				FlxG.sound.play("assets/sounds/Video Game Pack/GBC scream.wav");
 				_blood.setPosition(_jill.x + 28, _jill.y + 37);
 				_blood.start(false, 0.02, 50);

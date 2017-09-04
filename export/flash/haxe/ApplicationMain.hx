@@ -58,6 +58,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/MedalIcons/jillSad.PNG");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/title.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -72,6 +76,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/music/music-goes-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/music/Resident Evil GBC Music full.wav");
+		types.push (lime.Assets.AssetType.SOUND);
 		
 		
 		urls.push ("assets/sounds/gameOver.mp3");
@@ -223,7 +231,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "174",
+			build: "178",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

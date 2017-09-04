@@ -80,6 +80,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -103,6 +105,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/jillidle.png", AssetType.IMAGE);
 		className.set ("assets/images/jillwall.png", __ASSET__assets_images_jillwall_png);
 		type.set ("assets/images/jillwall.png", AssetType.IMAGE);
+		className.set ("assets/images/MedalIcons/jillSad.PNG", __ASSET__assets_images_medalicons_jillsad_png);
+		type.set ("assets/images/MedalIcons/jillSad.PNG", AssetType.IMAGE);
 		className.set ("assets/images/title.png", __ASSET__assets_images_title_png);
 		type.set ("assets/images/title.png", AssetType.IMAGE);
 		className.set ("assets/images/zombie.png", __ASSET__assets_images_zombie_png);
@@ -111,6 +115,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/music/Resident Evil GBC Music full.wav", __ASSET__assets_music_resident_evil_gbc_music_full_wav);
+		type.set ("assets/music/Resident Evil GBC Music full.wav", AssetType.SOUND);
 		className.set ("assets/sounds/gameOver.mp3", __ASSET__assets_sounds_gameover_mp3);
 		type.set ("assets/sounds/gameOver.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/jillBounce.mp3", __ASSET__assets_sounds_jillbounce_mp3);
@@ -188,6 +194,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/MedalIcons/jillSad.PNG";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/title.png";
 		path.set (id, id);
 		
@@ -204,6 +214,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/music/Resident Evil GBC Music full.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/gameOver.mp3";
 		path.set (id, id);
 		
@@ -331,6 +345,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/jillwall.png", __ASSET__assets_images_jillwall_png);
 		type.set ("assets/images/jillwall.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/MedalIcons/jillSad.PNG", __ASSET__assets_images_medalicons_jillsad_png);
+		type.set ("assets/images/MedalIcons/jillSad.PNG", AssetType.IMAGE);
+		
 		className.set ("assets/images/title.png", __ASSET__assets_images_title_png);
 		type.set ("assets/images/title.png", AssetType.IMAGE);
 		
@@ -342,6 +359,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/music/Resident Evil GBC Music full.wav", __ASSET__assets_music_resident_evil_gbc_music_full_wav);
+		type.set ("assets/music/Resident Evil GBC Music full.wav", AssetType.SOUND);
 		
 		className.set ("assets/sounds/gameOver.mp3", __ASSET__assets_sounds_gameover_mp3);
 		type.set ("assets/sounds/gameOver.mp3", AssetType.MUSIC);
@@ -1060,10 +1080,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_jillidle_aseprite extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_jillidle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_jillwall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_medalicons_jillsad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_title_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombiebite_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_gameover_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_jillbounce_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
@@ -1119,6 +1141,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1139,10 +1163,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/images/jillidle.aseprite") #if display private #end class __ASSET__assets_images_jillidle_aseprite extends lime.utils.Bytes {}
 @:image("assets/images/jillidle.png") #if display private #end class __ASSET__assets_images_jillidle_png extends lime.graphics.Image {}
 @:image("assets/images/jillwall.png") #if display private #end class __ASSET__assets_images_jillwall_png extends lime.graphics.Image {}
+@:image("assets/images/MedalIcons/jillSad.PNG") #if display private #end class __ASSET__assets_images_medalicons_jillsad_png extends lime.graphics.Image {}
 @:image("assets/images/title.png") #if display private #end class __ASSET__assets_images_title_png extends lime.graphics.Image {}
 @:image("assets/images/zombie.png") #if display private #end class __ASSET__assets_images_zombie_png extends lime.graphics.Image {}
 @:image("assets/images/zombieBite.png") #if display private #end class __ASSET__assets_images_zombiebite_png extends lime.graphics.Image {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
+@:file("assets/music/Resident Evil GBC Music full.wav") #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/gameOver.mp3") #if display private #end class __ASSET__assets_sounds_gameover_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/jillBounce.mp3") #if display private #end class __ASSET__assets_sounds_jillbounce_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
