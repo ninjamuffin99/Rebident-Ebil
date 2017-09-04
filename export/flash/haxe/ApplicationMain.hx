@@ -78,6 +78,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/music/Resident Evil GBC Music full.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("assets/music/Resident Evil GBC Music full.wav");
 		types.push (lime.Assets.AssetType.SOUND);
 		
@@ -92,6 +96,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/sounds/sounds-go-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/sounds/titleThing.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/sounds/Video Game Pack/8 bit blood.wav");
@@ -231,7 +239,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "178",
+			build: "214",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

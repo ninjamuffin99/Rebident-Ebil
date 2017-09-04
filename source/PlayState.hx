@@ -28,7 +28,12 @@ class PlayState extends FlxState
 	
 	override public function create():Void
 	{
-		FlxG.camera.antialiasing = true;
+		
+		if (FlxG.sound.music == null)
+		{
+			FlxG.sound.playMusic("assets/music/Resident Evil GBC Music full.mp3");
+		}
+		FlxG.sound.music.play();
 		
 		_zombie = new Zombie(20, 44);
 		add(_zombie);
@@ -39,6 +44,19 @@ class PlayState extends FlxState
 		
 		_ded = new FlxSprite(0, 0);
 		_ded.loadGraphic("assets/images/zombieBite.png", false, 91, 102);
+		
+		//Jills colors
+		_ded.replaceColor(0xFF231E21, FlxColor.fromString("#306230"));
+		_ded.replaceColor(0xFF0078AD, FlxColor.fromString("#8bac0f"));
+		_ded.replaceColor(0xFF0079AD, FlxColor.fromString("#8bac0f"));
+		_ded.replaceColor(0xFFFD8C93, FlxColor.fromString("#9bbc0f"));
+		//Zombie Colors
+		_ded.replaceColor(0xFF231e21, Colors.gb2);
+		_ded.replaceColor(0xFF15aa00, Colors.gb1);
+		_ded.replaceColor(0xFF14aa00, Colors.gb1);
+		_ded.replaceColor(0xFFb1d284, Colors.gb0);
+		
+		
 		add(_ded);
 		_ded.visible = false;
 		
@@ -65,6 +83,8 @@ class PlayState extends FlxState
 		
 		FlxG.worldBounds.set(0, 0, FlxG.width * 60, FlxG.height);
 		
+		
+		
 		super.create();
 	}
 
@@ -77,7 +97,7 @@ class PlayState extends FlxState
 			hitwall();
 		}
 		
-		if (FlxG.overlap(_jill, _zombie))
+		if (_zombie.x >= _jill.x - 30)
 		{
 			_jill.visible = false;
 			_zombie.visible = false;
@@ -112,7 +132,7 @@ class PlayState extends FlxState
 	public function hitwall():Void
 	{
 		_wall.health -= 0.1;
-		_wall.alpha -= 0.1;
+		_wall.alpha -= 0.1 / (1 * (_bustedWalls/2));
 		if (_wall.health <= 0)
 		{
 			_bustedWalls += 1;
@@ -126,7 +146,8 @@ class PlayState extends FlxState
 		FlxG.log.add("new wall");
 		_wall.x += FlxG.width;
 		_wall.alpha = 1;
-		_wall.health = 1 * _bustedWalls;
-		FlxTween.tween(_jill, {x: _jill.x + FlxG.width});
+		_wall.health = 1 * (_bustedWalls/2);
+		FlxTween.tween(_jill, {x: _jill.x + FlxG.width}, 1);
 	}
+	
 }

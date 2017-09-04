@@ -28,7 +28,7 @@ class GameOverState extends FlxState
 	
 	override public function create():Void 
 	{
-		
+		FlxG.sound.music.pause();
 		_screen = new FlxSprite(0, 0);
 		_screen.loadGraphic("assets/images/gameover.png", true, 160, 144);
 		add(_screen);

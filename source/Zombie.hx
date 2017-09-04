@@ -22,6 +22,18 @@ class Zombie extends FlxSprite
 		maxVelocity.x = 50;
 		FlxTween.tween(this, {y: this.y + 5}, 0.025, {type:FlxTween.PINGPONG, loopDelay: 0.4});
 		
+		
+		//Black
+		replaceColor(0xFF231e21, Colors.gb2);
+		
+		//Darkl Green
+		replaceColor(0xFF15aa00, Colors.gb1);
+		//pretty much same shade of dark green
+		replaceColor(0xFF14aa00, Colors.gb1);
+		
+		//Light green
+		replaceColor(0xFFb1d284, Colors.gb0);
+		
 		width = 30;
 		
 	}
