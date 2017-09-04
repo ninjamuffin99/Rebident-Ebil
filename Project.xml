@@ -80,6 +80,6 @@
 	
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
 	<haxedef name="as3_native" if="flash"/>
-	<haxedef name="-swf-lib" value="NewgroundsAPI.swc" if="flash"/>
+	<haxeflag name="-swf-lib" value="NewgroundsAPI.swc" if="flash"/>
 	
 </project>

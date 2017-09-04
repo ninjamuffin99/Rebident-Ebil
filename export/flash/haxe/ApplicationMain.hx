@@ -18,7 +18,7 @@ class ApplicationMain {
 		var app = new openfl.display.Application ();
 		app.create (config);
 		
-		var display = new flixel.system.FlxPreloader ();
+		var display = new CustomPreloader ();
 		
 		preloader = new openfl.display.Preloader (display);
 		app.setPreloader (preloader);
@@ -223,7 +223,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "166",
+			build: "174",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

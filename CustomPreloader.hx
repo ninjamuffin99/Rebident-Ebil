@@ -19,6 +19,16 @@ class CustomPreloader extends FlxBasePreloader
 	
 	override function create():Void 
 	{
+		API.connect(root, "API ID", " ENC KEY");
+		
+		if (API.isNewgrounds)
+		{
+			var ad:FlashAd = new FlashAd();
+			ad.x = 30;
+			ad.y = 20;
+			addChild(ad);
+			minDisplayTime = 8;
+		}
 		
 		super.create();
 	}
