@@ -11,7 +11,7 @@ import flixel.util.FlxColor;
  */
 class Jill extends FlxSprite 
 {
-	
+	var _up:Bool = true;
 
 	public function new(?X:Float=0, ?Y:Float=0) 
 	{
@@ -20,6 +20,7 @@ class Jill extends FlxSprite
 		animation.add("idle", [0]);
 		animation.add("wall", [1]);
 		animation.play("idle");
+		drag.x = 50;
 		
 		colorStuff();
 	}
@@ -29,6 +30,19 @@ class Jill extends FlxSprite
 		{
 			FlxG.camera.antialiasing = !FlxG.camera.antialiasing;
 		}
+		
+		
+		if (FlxG.keys.justPressed.X)
+		{
+			velocity.x += 20;
+			if (_up)
+				y += 8;
+			else
+				y -= 9;
+			_up = !_up;
+		}
+		
+		FlxG.watch.add(this.velocity, "x");
 		
 		if (FlxG.keys.justPressed.Z)
 		{

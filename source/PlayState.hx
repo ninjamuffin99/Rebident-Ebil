@@ -92,6 +92,9 @@ class PlayState extends FlxState
 	{
 		FlxG.watch.addMouse();
 		FlxG.watch.add(_jill, "x");
+		
+		FlxG.collide(_jill, _wall);
+		
 		if (FlxG.keys.justPressed.Z)
 		{
 			hitwall();
@@ -147,7 +150,7 @@ class PlayState extends FlxState
 		_wall.x += FlxG.width;
 		_wall.alpha = 1;
 		_wall.health = 1 * (_bustedWalls/2);
-		FlxTween.tween(_jill, {x: _jill.x + FlxG.width}, 1);
+		//FlxTween.tween(_jill, {x: _jill.x + FlxG.width}, 1);
 	}
 	
 }
