@@ -87,7 +87,7 @@ class PlayState extends FlxState
 		
 		//FlxG.game.setFilters(Colors.gbFilter);
 		
-		FlxG.worldBounds.set(0, -10, 160 * 60, FlxG.height + 20);
+		
 		
 		
 		
@@ -96,6 +96,8 @@ class PlayState extends FlxState
 
 	override public function update(elapsed:Float):Void
 	{
+		
+		FlxG.worldBounds.set(0, -10, 160 * 60, FlxG.height + 20);
 		FlxG.watch.addMouse();
 		FlxG.watch.add(_jill, "x");
 		
@@ -144,7 +146,7 @@ class PlayState extends FlxState
 		_wall.health -= 0.1;
 		
 		//_wall.alpha -= 0.1 / (1 * (_bustedWalls/2));
-		if (_wall.health <= 0)
+		if (_wall.health <= 0.5)
 		{
 			_bustedWalls += 1;
 			FlxG.log.add(_bustedWalls);
@@ -155,10 +157,11 @@ class PlayState extends FlxState
 	public function _newWall():Void
 	{
 		FlxG.log.add("new wall");
-		_wall.health = 1 * (_bustedWalls/2);
+		
 		FlxG.log.add(_wall.health + "no underscore");
 		FlxG.log.add(_wall._health + "underscpre");
-		_wall.x += FlxG.width;
+		_wall.health = 1 * (_bustedWalls/2);
+		_wall.x = FlxG.width * (_bustedWalls + 1);
 		//_wall.alpha = 1;
 		
 		//FlxTween.tween(_jill, {x: _jill.x + FlxG.width}, 1);
