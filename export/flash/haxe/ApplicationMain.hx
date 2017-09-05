@@ -82,6 +82,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/music/704973_just-kickin-it-loop GBC edition.wav");
+		types.push (lime.Assets.AssetType.SOUND);
+		
+		
 		urls.push ("assets/music/music-goes-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -92,6 +96,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/music/Resident Evil GBC Music full.wav");
 		types.push (lime.Assets.AssetType.SOUND);
+		
+		
+		urls.push ("assets/music/titleScreen.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/sounds/bootSOund.mp3");
@@ -108,6 +116,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/sounds/sounds-go-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/sounds/titleBit.wav");
+		types.push (lime.Assets.AssetType.SOUND);
 		
 		
 		urls.push ("assets/sounds/titleThing.mp3");
@@ -255,7 +267,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "311",
+			build: "319",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

@@ -88,6 +88,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -123,12 +126,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/zombie.png", AssetType.IMAGE);
 		className.set ("assets/images/zombieBite.png", __ASSET__assets_images_zombiebite_png);
 		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
+		className.set ("assets/music/704973_just-kickin-it-loop GBC edition.wav", __ASSET__assets_music_704973_just_kickin_it_loop_gbc_edition_wav);
+		type.set ("assets/music/704973_just-kickin-it-loop GBC edition.wav", AssetType.SOUND);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/music/Resident Evil GBC Music full.mp3", __ASSET__assets_music_resident_evil_gbc_music_full_mp3);
 		type.set ("assets/music/Resident Evil GBC Music full.mp3", AssetType.MUSIC);
 		className.set ("assets/music/Resident Evil GBC Music full.wav", __ASSET__assets_music_resident_evil_gbc_music_full_wav);
 		type.set ("assets/music/Resident Evil GBC Music full.wav", AssetType.SOUND);
+		className.set ("assets/music/titleScreen.mp3", __ASSET__assets_music_titlescreen_mp3);
+		type.set ("assets/music/titleScreen.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/bootSOund.mp3", __ASSET__assets_sounds_bootsound_mp3);
 		type.set ("assets/sounds/bootSOund.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/gameOver.mp3", __ASSET__assets_sounds_gameover_mp3);
@@ -137,6 +144,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/jillBounce.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
+		className.set ("assets/sounds/titleBit.wav", __ASSET__assets_sounds_titlebit_wav);
+		type.set ("assets/sounds/titleBit.wav", AssetType.SOUND);
 		className.set ("assets/sounds/titleThing.mp3", __ASSET__assets_sounds_titlething_mp3);
 		type.set ("assets/sounds/titleThing.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/Video Game Pack/8 bit blood.wav", __ASSET__assets_sounds_video_game_pack_8_bit_blood_wav);
@@ -236,6 +245,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/music/704973_just-kickin-it-loop GBC edition.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		
@@ -248,6 +261,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.SOUND);
+		id = "assets/music/titleScreen.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
 		id = "assets/sounds/bootSOund.mp3";
 		path.set (id, id);
 		
@@ -264,6 +281,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/sounds/titleBit.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/titleThing.mp3";
 		path.set (id, id);
 		
@@ -405,6 +426,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/zombieBite.png", __ASSET__assets_images_zombiebite_png);
 		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
 		
+		className.set ("assets/music/704973_just-kickin-it-loop GBC edition.wav", __ASSET__assets_music_704973_just_kickin_it_loop_gbc_edition_wav);
+		type.set ("assets/music/704973_just-kickin-it-loop GBC edition.wav", AssetType.SOUND);
+		
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		
@@ -413,6 +437,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/music/Resident Evil GBC Music full.wav", __ASSET__assets_music_resident_evil_gbc_music_full_wav);
 		type.set ("assets/music/Resident Evil GBC Music full.wav", AssetType.SOUND);
+		
+		className.set ("assets/music/titleScreen.mp3", __ASSET__assets_music_titlescreen_mp3);
+		type.set ("assets/music/titleScreen.mp3", AssetType.MUSIC);
 		
 		className.set ("assets/sounds/bootSOund.mp3", __ASSET__assets_sounds_bootsound_mp3);
 		type.set ("assets/sounds/bootSOund.mp3", AssetType.MUSIC);
@@ -425,6 +452,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/sounds/titleBit.wav", __ASSET__assets_sounds_titlebit_wav);
+		type.set ("assets/sounds/titleBit.wav", AssetType.SOUND);
 		
 		className.set ("assets/sounds/titleThing.mp3", __ASSET__assets_sounds_titlething_mp3);
 		type.set ("assets/sounds/titleThing.mp3", AssetType.MUSIC);
@@ -1146,13 +1176,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_title_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombiebite_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_music_704973_just_kickin_it_loop_gbc_edition_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_music_titlescreen_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_bootsound_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_gameover_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_jillbounce_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_titlebit_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_titlething_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_blood_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_bump_wav extends flash.media.Sound { }
@@ -1215,6 +1248,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1241,13 +1277,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/title.png") #if display private #end class __ASSET__assets_images_title_png extends lime.graphics.Image {}
 @:image("assets/images/zombie.png") #if display private #end class __ASSET__assets_images_zombie_png extends lime.graphics.Image {}
 @:image("assets/images/zombieBite.png") #if display private #end class __ASSET__assets_images_zombiebite_png extends lime.graphics.Image {}
+@:file("assets/music/704973_just-kickin-it-loop GBC edition.wav") #if display private #end class __ASSET__assets_music_704973_just_kickin_it_loop_gbc_edition_wav extends lime.utils.Bytes {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/music/Resident Evil GBC Music full.mp3") #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_mp3 extends lime.utils.Bytes {}
 @:file("assets/music/Resident Evil GBC Music full.wav") #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_wav extends lime.utils.Bytes {}
+@:file("assets/music/titleScreen.mp3") #if display private #end class __ASSET__assets_music_titlescreen_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/bootSOund.mp3") #if display private #end class __ASSET__assets_sounds_bootsound_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/gameOver.mp3") #if display private #end class __ASSET__assets_sounds_gameover_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/jillBounce.mp3") #if display private #end class __ASSET__assets_sounds_jillbounce_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
+@:file("assets/sounds/titleBit.wav") #if display private #end class __ASSET__assets_sounds_titlebit_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/titleThing.mp3") #if display private #end class __ASSET__assets_sounds_titlething_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/Video Game Pack/8 bit blood.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_blood_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/Video Game Pack/8 bit bump.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_8_bit_bump_wav extends lime.utils.Bytes {}

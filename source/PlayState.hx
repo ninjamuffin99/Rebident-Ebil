@@ -33,10 +33,7 @@ class PlayState extends FlxState
 	{
 		super.create();
 		
-		if (FlxG.sound.music == null)
-		{
-			FlxG.sound.playMusic("assets/music/Resident Evil GBC Music full.mp3");
-		}
+		FlxG.sound.playMusic("assets/music/Resident Evil GBC Music full.mp3");
 		FlxG.sound.music.play();
 		
 		_zombie = new Zombie(-10, 44);

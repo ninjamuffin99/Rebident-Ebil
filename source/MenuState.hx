@@ -16,7 +16,7 @@ class MenuState extends FlxState
 		bg.loadGraphic("assets/images/title.png", false, 160, 144);
 		add(bg);
 		
-		FlxG.sound.play("assets/sounds/titleThing.mp3");
+		FlxG.sound.play("assets/sounds/titleBit.wav", 1, false, null, true, playSong);
 		
 		super.create();
 	}
@@ -29,5 +29,11 @@ class MenuState extends FlxState
 		}
 		
 		super.update(elapsed);
+	}
+	
+	private function playSong():Void
+	{
+		FlxG.sound.playMusic("assets/music/titleScreen.mp3");
+		
 	}
 }
