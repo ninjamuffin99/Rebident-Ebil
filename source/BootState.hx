@@ -21,7 +21,7 @@ class BootState extends FlxState
 	{
 		FlxG.camera.antialiasing = true;
 		
-		_NG = new FlxText(0, 0, 0, "Newgrounds", 18);
+		_NG = new FlxText(0, 0- 18, 0, "Newgrounds", 18);
 		_NG.font = "assets/data/Nintender (WIP).ttf";
 		_NG.screenCenter(FlxAxes.X);
 		_NG.color = Colors.gb3;

@@ -42,7 +42,27 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.BINARY);
 		
 		
+		urls.push ("assets/images/bg.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/crippleJill.ase");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/Dead_Sprite_1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/fgWall.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/gameover.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Grab_Sprite_1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -62,7 +82,15 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/jillSmoosh.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/jillwall.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Jill_Sprite_Wall_2.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -70,7 +98,19 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/Sprite_BG.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/title.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/wall.ase");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/wall.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -79,6 +119,14 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/zombieBite.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/zombienoBite.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/zombiJillDed.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -267,7 +315,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "336",
+			build: "355",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

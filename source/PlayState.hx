@@ -16,6 +16,9 @@ import com.newgrounds.*;
 
 class PlayState extends FlxState
 {
+	private var _bg:FlxSprite;
+	private var _fg:FlxSprite;
+	
 	private var _jill:Jill;
 	private var _ded:FlxSprite;
 	private var _wall:Wall;
@@ -35,12 +38,20 @@ class PlayState extends FlxState
 		
 		FlxG.sound.playMusic("assets/music/Resident Evil GBC Music full.mp3");
 		FlxG.sound.music.play();
+		FlxG.camera.bgColor = Colors.gb3;
 		
-		_zombie = new Zombie(-10, 44);
+		_bg = new FlxSprite(0 - 160, 0);
+		_bg.loadGraphic("assets/images/bg.png", false, 320, 144);
+		add(_bg);
+		
+		_zombie = new Zombie(-30, 44);
 		add(_zombie);
 		
 		
-		_jill = new Jill(90, 44);
+		_wall = new Wall(126, 0);
+		add(_wall);
+		
+		_jill = new Jill(70, 44);
 		add(_jill);
 		
 		_ded = new FlxSprite(0, 0);
@@ -73,9 +84,13 @@ class PlayState extends FlxState
 		_blood.velocity.set( -10, 15, 10, 24);
 		
 		
+		//126
 		
-		_wall = new Wall(_jill.x + _jill.width + 4, 0);
-		add(_wall);
+		
+		
+		_fg = new FlxSprite((_wall.x + _wall.width) - FlxG.width * 2, 0);
+		_fg.loadGraphic("assets/images/fgWall.png", false, 334, 144);
+		add(_fg);
 		
 		FlxG.camera.follow(_jill, NO_DEAD_ZONE, 0.5);
 		FlxG.camera.maxScrollY = FlxG.height;
@@ -167,6 +182,8 @@ class PlayState extends FlxState
 		
 		_wall.health = 1 * (_bustedWalls/5);
 		_wall.x += FlxG.width;
+		_bg.x += FlxG.width;
+		_fg.x += FlxG.width;
 		_wall.alpha = 1;
 		
 		if (_endlessMode)

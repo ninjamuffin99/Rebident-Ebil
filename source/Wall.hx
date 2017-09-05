@@ -16,9 +16,10 @@ class Wall extends FlxSprite
 	public function new(?X:Float=0, ?Y:Float=0) 
 	{
 		super(X, Y);
-		makeGraphic(20, FlxG.height);
+		loadGraphic("assets/images/wall.png", false, 20, 144);
 		immovable = true;
 		_health = 1;
+		
 	}
 	
 }

@@ -18,7 +18,7 @@ class Jill extends FlxSprite
 		super(X, Y);
 		loadGraphic("assets/images/jill.png", true, 51, 100);
 		animation.add("idle", [0]);
-		animation.add("wall", [1]);
+		animation.add("wall", [1, 2], 6, false);
 		animation.play("idle");
 		drag.x = 50;
 		
@@ -50,7 +50,7 @@ class Jill extends FlxSprite
 		{
 			FlxG.camera.shake(0.01, 0.1);
 			FlxG.sound.play("assets/sounds/jillBounce.mp3");
-			
+			animation.play("wall");
 			
 			x += 15;
 		}
@@ -58,13 +58,10 @@ class Jill extends FlxSprite
 		{
 			x -= 15;
 		}
-		if (FlxG.keys.pressed.Z)
-		{
-			animation.play("wall");
-		}
-		else
+		if (!FlxG.keys.pressed.Z)
 		{
 			animation.play("idle");
+			
 		}
 		super.update(elapsed);
 	}

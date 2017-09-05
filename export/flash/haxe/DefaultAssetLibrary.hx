@@ -91,6 +91,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -106,8 +118,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/Nintender (WIP).ttf", AssetType.FONT);
 		className.set ("assets/data/westral-fonts_nintender.zip", __ASSET__assets_data_westral_fonts_nintender_zip);
 		type.set ("assets/data/westral-fonts_nintender.zip", AssetType.BINARY);
+		className.set ("assets/images/bg.png", __ASSET__assets_images_bg_png);
+		type.set ("assets/images/bg.png", AssetType.IMAGE);
+		className.set ("assets/images/crippleJill.ase", __ASSET__assets_images_cripplejill_ase);
+		type.set ("assets/images/crippleJill.ase", AssetType.BINARY);
+		className.set ("assets/images/Dead_Sprite_1.png", __ASSET__assets_images_dead_sprite_1_png);
+		type.set ("assets/images/Dead_Sprite_1.png", AssetType.IMAGE);
+		className.set ("assets/images/fgWall.png", __ASSET__assets_images_fgwall_png);
+		type.set ("assets/images/fgWall.png", AssetType.IMAGE);
 		className.set ("assets/images/gameover.png", __ASSET__assets_images_gameover_png);
 		type.set ("assets/images/gameover.png", AssetType.IMAGE);
+		className.set ("assets/images/Grab_Sprite_1.png", __ASSET__assets_images_grab_sprite_1_png);
+		type.set ("assets/images/Grab_Sprite_1.png", AssetType.IMAGE);
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		className.set ("assets/images/jill.png", __ASSET__assets_images_jill_png);
@@ -116,16 +138,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/jillidle.aseprite", AssetType.BINARY);
 		className.set ("assets/images/jillidle.png", __ASSET__assets_images_jillidle_png);
 		type.set ("assets/images/jillidle.png", AssetType.IMAGE);
+		className.set ("assets/images/jillSmoosh.png", __ASSET__assets_images_jillsmoosh_png);
+		type.set ("assets/images/jillSmoosh.png", AssetType.IMAGE);
 		className.set ("assets/images/jillwall.png", __ASSET__assets_images_jillwall_png);
 		type.set ("assets/images/jillwall.png", AssetType.IMAGE);
+		className.set ("assets/images/Jill_Sprite_Wall_2.png", __ASSET__assets_images_jill_sprite_wall_2_png);
+		type.set ("assets/images/Jill_Sprite_Wall_2.png", AssetType.IMAGE);
 		className.set ("assets/images/MedalIcons/jillSad.PNG", __ASSET__assets_images_medalicons_jillsad_png);
 		type.set ("assets/images/MedalIcons/jillSad.PNG", AssetType.IMAGE);
+		className.set ("assets/images/Sprite_BG.png", __ASSET__assets_images_sprite_bg_png);
+		type.set ("assets/images/Sprite_BG.png", AssetType.IMAGE);
 		className.set ("assets/images/title.png", __ASSET__assets_images_title_png);
 		type.set ("assets/images/title.png", AssetType.IMAGE);
+		className.set ("assets/images/wall.ase", __ASSET__assets_images_wall_ase);
+		type.set ("assets/images/wall.ase", AssetType.BINARY);
+		className.set ("assets/images/wall.png", __ASSET__assets_images_wall_png);
+		type.set ("assets/images/wall.png", AssetType.IMAGE);
 		className.set ("assets/images/zombie.png", __ASSET__assets_images_zombie_png);
 		type.set ("assets/images/zombie.png", AssetType.IMAGE);
 		className.set ("assets/images/zombieBite.png", __ASSET__assets_images_zombiebite_png);
 		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
+		className.set ("assets/images/zombienoBite.png", __ASSET__assets_images_zombienobite_png);
+		type.set ("assets/images/zombienoBite.png", AssetType.IMAGE);
+		className.set ("assets/images/zombiJillDed.png", __ASSET__assets_images_zombijillded_png);
+		type.set ("assets/images/zombiJillDed.png", AssetType.IMAGE);
 		className.set ("assets/music/704973_just-kickin-it-loop GBC edition.wav", __ASSET__assets_music_704973_just_kickin_it_loop_gbc_edition_wav);
 		type.set ("assets/music/704973_just-kickin-it-loop GBC edition.wav", AssetType.SOUND);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
@@ -205,7 +241,27 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.BINARY);
+		id = "assets/images/bg.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/crippleJill.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/Dead_Sprite_1.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/fgWall.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/gameover.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Grab_Sprite_1.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -225,7 +281,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/jillSmoosh.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/jillwall.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Jill_Sprite_Wall_2.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -233,7 +297,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Sprite_BG.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/title.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/wall.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
+		id = "assets/images/wall.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -242,6 +318,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/zombieBite.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/zombienoBite.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/zombiJillDed.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -396,8 +480,23 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/data/westral-fonts_nintender.zip", __ASSET__assets_data_westral_fonts_nintender_zip);
 		type.set ("assets/data/westral-fonts_nintender.zip", AssetType.BINARY);
 		
+		className.set ("assets/images/bg.png", __ASSET__assets_images_bg_png);
+		type.set ("assets/images/bg.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/crippleJill.ase", __ASSET__assets_images_cripplejill_ase);
+		type.set ("assets/images/crippleJill.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/Dead_Sprite_1.png", __ASSET__assets_images_dead_sprite_1_png);
+		type.set ("assets/images/Dead_Sprite_1.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/fgWall.png", __ASSET__assets_images_fgwall_png);
+		type.set ("assets/images/fgWall.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/gameover.png", __ASSET__assets_images_gameover_png);
 		type.set ("assets/images/gameover.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Grab_Sprite_1.png", __ASSET__assets_images_grab_sprite_1_png);
+		type.set ("assets/images/Grab_Sprite_1.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
@@ -411,20 +510,41 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/jillidle.png", __ASSET__assets_images_jillidle_png);
 		type.set ("assets/images/jillidle.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/jillSmoosh.png", __ASSET__assets_images_jillsmoosh_png);
+		type.set ("assets/images/jillSmoosh.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/jillwall.png", __ASSET__assets_images_jillwall_png);
 		type.set ("assets/images/jillwall.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Jill_Sprite_Wall_2.png", __ASSET__assets_images_jill_sprite_wall_2_png);
+		type.set ("assets/images/Jill_Sprite_Wall_2.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/MedalIcons/jillSad.PNG", __ASSET__assets_images_medalicons_jillsad_png);
 		type.set ("assets/images/MedalIcons/jillSad.PNG", AssetType.IMAGE);
 		
+		className.set ("assets/images/Sprite_BG.png", __ASSET__assets_images_sprite_bg_png);
+		type.set ("assets/images/Sprite_BG.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/title.png", __ASSET__assets_images_title_png);
 		type.set ("assets/images/title.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/wall.ase", __ASSET__assets_images_wall_ase);
+		type.set ("assets/images/wall.ase", AssetType.BINARY);
+		
+		className.set ("assets/images/wall.png", __ASSET__assets_images_wall_png);
+		type.set ("assets/images/wall.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/zombie.png", __ASSET__assets_images_zombie_png);
 		type.set ("assets/images/zombie.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/zombieBite.png", __ASSET__assets_images_zombiebite_png);
 		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/zombienoBite.png", __ASSET__assets_images_zombienobite_png);
+		type.set ("assets/images/zombienoBite.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/zombiJillDed.png", __ASSET__assets_images_zombijillded_png);
+		type.set ("assets/images/zombiJillDed.png", AssetType.IMAGE);
 		
 		className.set ("assets/music/704973_just-kickin-it-loop GBC edition.wav", __ASSET__assets_music_704973_just_kickin_it_loop_gbc_edition_wav);
 		type.set ("assets/music/704973_just-kickin-it-loop GBC edition.wav", AssetType.SOUND);
@@ -1166,16 +1286,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_nintender__wip__ttf extends flash.text.Font { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_westral_fonts_nintender_zip extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_cripplejill_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_dead_sprite_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_fgwall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_gameover_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_grab_sprite_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_jill_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_jillidle_aseprite extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_jillidle_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_jillsmoosh_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_jillwall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_jill_sprite_wall_2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_medalicons_jillsad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_sprite_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_title_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_wall_ase extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_wall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombiebite_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_zombienobite_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_zombijillded_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_704973_just_kickin_it_loop_gbc_edition_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_mp3 extends flash.media.Sound { }
@@ -1251,6 +1383,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1267,16 +1411,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.Bytes {}
 @:font("assets/data/Nintender (WIP).ttf") #if display private #end class __ASSET__assets_data_nintender__wip__ttf extends lime.text.Font {}
 @:file("assets/data/westral-fonts_nintender.zip") #if display private #end class __ASSET__assets_data_westral_fonts_nintender_zip extends lime.utils.Bytes {}
+@:image("assets/images/bg.png") #if display private #end class __ASSET__assets_images_bg_png extends lime.graphics.Image {}
+@:file("assets/images/crippleJill.ase") #if display private #end class __ASSET__assets_images_cripplejill_ase extends lime.utils.Bytes {}
+@:image("assets/images/Dead_Sprite_1.png") #if display private #end class __ASSET__assets_images_dead_sprite_1_png extends lime.graphics.Image {}
+@:image("assets/images/fgWall.png") #if display private #end class __ASSET__assets_images_fgwall_png extends lime.graphics.Image {}
 @:image("assets/images/gameover.png") #if display private #end class __ASSET__assets_images_gameover_png extends lime.graphics.Image {}
+@:image("assets/images/Grab_Sprite_1.png") #if display private #end class __ASSET__assets_images_grab_sprite_1_png extends lime.graphics.Image {}
 @:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.Bytes {}
 @:image("assets/images/jill.png") #if display private #end class __ASSET__assets_images_jill_png extends lime.graphics.Image {}
 @:file("assets/images/jillidle.aseprite") #if display private #end class __ASSET__assets_images_jillidle_aseprite extends lime.utils.Bytes {}
 @:image("assets/images/jillidle.png") #if display private #end class __ASSET__assets_images_jillidle_png extends lime.graphics.Image {}
+@:image("assets/images/jillSmoosh.png") #if display private #end class __ASSET__assets_images_jillsmoosh_png extends lime.graphics.Image {}
 @:image("assets/images/jillwall.png") #if display private #end class __ASSET__assets_images_jillwall_png extends lime.graphics.Image {}
+@:image("assets/images/Jill_Sprite_Wall_2.png") #if display private #end class __ASSET__assets_images_jill_sprite_wall_2_png extends lime.graphics.Image {}
 @:image("assets/images/MedalIcons/jillSad.PNG") #if display private #end class __ASSET__assets_images_medalicons_jillsad_png extends lime.graphics.Image {}
+@:image("assets/images/Sprite_BG.png") #if display private #end class __ASSET__assets_images_sprite_bg_png extends lime.graphics.Image {}
 @:image("assets/images/title.png") #if display private #end class __ASSET__assets_images_title_png extends lime.graphics.Image {}
+@:file("assets/images/wall.ase") #if display private #end class __ASSET__assets_images_wall_ase extends lime.utils.Bytes {}
+@:image("assets/images/wall.png") #if display private #end class __ASSET__assets_images_wall_png extends lime.graphics.Image {}
 @:image("assets/images/zombie.png") #if display private #end class __ASSET__assets_images_zombie_png extends lime.graphics.Image {}
 @:image("assets/images/zombieBite.png") #if display private #end class __ASSET__assets_images_zombiebite_png extends lime.graphics.Image {}
+@:image("assets/images/zombienoBite.png") #if display private #end class __ASSET__assets_images_zombienobite_png extends lime.graphics.Image {}
+@:image("assets/images/zombiJillDed.png") #if display private #end class __ASSET__assets_images_zombijillded_png extends lime.graphics.Image {}
 @:file("assets/music/704973_just-kickin-it-loop GBC edition.wav") #if display private #end class __ASSET__assets_music_704973_just_kickin_it_loop_gbc_edition_wav extends lime.utils.Bytes {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/music/Resident Evil GBC Music full.mp3") #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_mp3 extends lime.utils.Bytes {}
