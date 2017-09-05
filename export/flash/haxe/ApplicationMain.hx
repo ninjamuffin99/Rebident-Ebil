@@ -34,6 +34,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("Nintender");
+		types.push (lime.Assets.AssetType.FONT);
+		
+		
+		urls.push ("assets/data/westral-fonts_nintender.zip");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/gameover.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -84,6 +92,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/music/Resident Evil GBC Music full.wav");
 		types.push (lime.Assets.AssetType.SOUND);
+		
+		
+		urls.push ("assets/sounds/bootSOund.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/sounds/gameOver.mp3");
@@ -243,7 +255,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "299",
+			build: "311",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,
