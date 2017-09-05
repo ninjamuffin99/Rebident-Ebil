@@ -118,6 +118,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/zombieBite.aseprite");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/zombieBite.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -315,7 +319,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "355",
+			build: "362",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

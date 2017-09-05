@@ -44,6 +44,8 @@ class PlayState extends FlxState
 		_bg.loadGraphic("assets/images/bg.png", false, 320, 144);
 		add(_bg);
 		
+		
+		
 		_zombie = new Zombie(-30, 44);
 		add(_zombie);
 		
@@ -55,7 +57,8 @@ class PlayState extends FlxState
 		add(_jill);
 		
 		_ded = new FlxSprite(0, 0);
-		_ded.loadGraphic("assets/images/zombieBite.png", false, 91, 102);
+		_ded.loadGraphic("assets/images/zombieBite.png", true, 91, 102);
+		_ded.animation.add("ded", [0, 0, 1], 3, false);
 		
 		//Jills colors
 		_ded.replaceColor(0xFF231E21, FlxColor.fromString("#306230"));
@@ -92,6 +95,10 @@ class PlayState extends FlxState
 		_fg.loadGraphic("assets/images/fgWall.png", false, 334, 144);
 		add(_fg);
 		
+		
+		
+		bgColors();
+		
 		FlxG.camera.follow(_jill, NO_DEAD_ZONE, 0.5);
 		FlxG.camera.maxScrollY = FlxG.height;
 		FlxG.camera.targetOffset.x = -35;
@@ -105,6 +112,38 @@ class PlayState extends FlxState
 		
 		
 		
+		
+	}
+	
+	private function bgColors():Void
+	{
+		//Black
+		_bg.replaceColor(0xFF000000, Colors.gb3);
+		_wall.replaceColor(0xFF000000, Colors.gb3);
+		_fg.replaceColor(0xFF000000, Colors.gb3);
+		
+		//dark brown
+		_bg.replaceColor(0xFF640000, Colors.gb2);
+		_wall.replaceColor(0xFF640000, Colors.gb2);
+		_fg.replaceColor(0xFF640000, Colors.gb2);
+		
+		//brown
+		_bg.replaceColor(0xFF803600, Colors.gb1);
+		_bg.replaceColor(0xFF803700, Colors.gb1);
+		_bg.replaceColor(0xFF775100, Colors.gb1);
+		
+		_wall.replaceColor(0xFF803600, Colors.gb1);
+		_wall.replaceColor(0xFF803700, Colors.gb1);
+		_wall.replaceColor(0xFF775100, Colors.gb1);
+		
+		_fg.replaceColor(0xFF803600, Colors.gb1);
+		_fg.replaceColor(0xFF803700, Colors.gb1);
+		_fg.replaceColor(0xFF775100, Colors.gb1);
+		
+		//light brown
+		_bg.replaceColor(0xFF805e58, Colors.gb0);
+		_wall.replaceColor(0xFF805e58, Colors.gb0);
+		_fg.replaceColor(0xFF805e58, Colors.gb0);
 		
 	}
 
@@ -139,6 +178,7 @@ class PlayState extends FlxState
 			
 			if (!_justDied)
 			{
+				_ded.animation.play("ded");
 				if (_bustedWalls < 1)
 				{
 					API.unlockMedal("Wow Jill, you suck at this game!");

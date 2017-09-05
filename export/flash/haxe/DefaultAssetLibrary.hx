@@ -103,6 +103,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -156,6 +157,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/wall.png", AssetType.IMAGE);
 		className.set ("assets/images/zombie.png", __ASSET__assets_images_zombie_png);
 		type.set ("assets/images/zombie.png", AssetType.IMAGE);
+		className.set ("assets/images/zombieBite.aseprite", __ASSET__assets_images_zombiebite_aseprite);
+		type.set ("assets/images/zombieBite.aseprite", AssetType.BINARY);
 		className.set ("assets/images/zombieBite.png", __ASSET__assets_images_zombiebite_png);
 		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
 		className.set ("assets/images/zombienoBite.png", __ASSET__assets_images_zombienobite_png);
@@ -317,6 +320,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/zombieBite.aseprite";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/zombieBite.png";
 		path.set (id, id);
 		
@@ -536,6 +543,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/zombie.png", __ASSET__assets_images_zombie_png);
 		type.set ("assets/images/zombie.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/zombieBite.aseprite", __ASSET__assets_images_zombiebite_aseprite);
+		type.set ("assets/images/zombieBite.aseprite", AssetType.BINARY);
 		
 		className.set ("assets/images/zombieBite.png", __ASSET__assets_images_zombiebite_png);
 		type.set ("assets/images/zombieBite.png", AssetType.IMAGE);
@@ -1305,6 +1315,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_wall_ase extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_wall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombie_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_zombiebite_aseprite extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombiebite_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombienobite_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_zombijillded_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1395,6 +1406,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font { public function new () { super (); name = "Monsterrat"; } } 
 
@@ -1430,6 +1442,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/images/wall.ase") #if display private #end class __ASSET__assets_images_wall_ase extends lime.utils.Bytes {}
 @:image("assets/images/wall.png") #if display private #end class __ASSET__assets_images_wall_png extends lime.graphics.Image {}
 @:image("assets/images/zombie.png") #if display private #end class __ASSET__assets_images_zombie_png extends lime.graphics.Image {}
+@:file("assets/images/zombieBite.aseprite") #if display private #end class __ASSET__assets_images_zombiebite_aseprite extends lime.utils.Bytes {}
 @:image("assets/images/zombieBite.png") #if display private #end class __ASSET__assets_images_zombiebite_png extends lime.graphics.Image {}
 @:image("assets/images/zombienoBite.png") #if display private #end class __ASSET__assets_images_zombienobite_png extends lime.graphics.Image {}
 @:image("assets/images/zombiJillDed.png") #if display private #end class __ASSET__assets_images_zombijillded_png extends lime.graphics.Image {}
