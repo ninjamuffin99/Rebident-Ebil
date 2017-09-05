@@ -51,7 +51,7 @@ class GameOverState extends FlxState
 		FlxG.fixedTimestep = false;
 		
 		//These are when the flixel notes/sounds play, you probably shouldn't change these if you want the functions to sync up properly
-		_times = [0.054, 1.033, 2.054, 3.242, 4];
+		_times = [0.054, 1.033, 2.054, 3.242, 4, 4.1];
 		
 		//An array of functions to call after each time thing has passed, feel free to rename to whatever
 		_functions = [addText1, addText2, addText3, addText4, addText5];
@@ -149,7 +149,7 @@ class GameOverState extends FlxState
 	private function addText5():Void
 	{
 		
-		//stuff that happens
+		FlxG.switchState(new MenuState());
 		
 	}
 	
