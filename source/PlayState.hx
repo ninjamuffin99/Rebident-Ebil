@@ -27,6 +27,8 @@ class PlayState extends FlxState
 	private var _blood:FlxEmitter;
 	private var _justDied:Bool = false;
 	
+	private var _endlessMode:Bool = false;
+	
 	override public function create():Void
 	{
 		super.create();
@@ -108,6 +110,12 @@ class PlayState extends FlxState
 			hitwall();
 		}
 		
+		if (FlxG.keys.justPressed.E)
+		{
+			_endlessMode = !_endlessMode;
+			FlxG.sound.play("assets/sounds/Video Game Pack/konami pause.wav");
+		}
+		
 		if (_zombie.x >= _jill.x - 30)
 		{
 			_jill.visible = false;
@@ -128,6 +136,7 @@ class PlayState extends FlxState
 				_blood.setPosition(_jill.x + 28, _jill.y + 37);
 				_blood.start(false, 0.02, 50);
 				_justDied = true;
+				API.postScore("ENDLESS MODE: Walls Busted", _bustedWalls);
 			}
 			
 			
@@ -145,7 +154,7 @@ class PlayState extends FlxState
 	{
 		_wall.health -= 0.1;
 		
-		//_wall.alpha -= 0.1 / (1 * (_bustedWalls/2));
+		_wall.alpha -= 0.1 / (1 * (_bustedWalls/5));
 		if (_wall.health <= 0.5)
 		{
 			_bustedWalls += 1;
@@ -158,12 +167,21 @@ class PlayState extends FlxState
 	{
 		FlxG.log.add("new wall");
 		
+		
+		_wall.health = 1 * (_bustedWalls/5);
+		_wall.x += FlxG.width;
+		_wall.alpha = 1;
+		
+		if (_endlessMode)
+		{
+			if (_wall.health >= 2.2)
+			{
+				_wall.health = 2;
+			}
+		}
+		
 		FlxG.log.add(_wall.health + "no underscore");
 		FlxG.log.add(_wall._health + "underscpre");
-		_wall.health = 1 * (_bustedWalls/2);
-		_wall.x = FlxG.width * (_bustedWalls + 1);
-		//_wall.alpha = 1;
-		
 		//FlxTween.tween(_jill, {x: _jill.x + FlxG.width}, 1);
 		_wall.updateHitbox();
 	}
