@@ -30,8 +30,7 @@ class Colors
 	 */
 	public static var gb3:Int = 0xFF0f380f;
 	
-	public static var palette:Array<Array<Int>> = [GB];
-	
+	//public static var gbFilters:
 
 	public function new() 
 	{

@@ -35,7 +35,7 @@ class Jill extends FlxSprite
 		
 		if (FlxG.keys.justPressed.X)
 		{
-			velocity.x += 15;
+			velocity.x += 30;
 			FlxG.sound.play("assets/sounds/walk.wav");
 			if (_up)
 				y += 8;
