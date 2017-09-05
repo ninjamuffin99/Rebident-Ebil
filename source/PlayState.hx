@@ -83,6 +83,8 @@ class PlayState extends FlxState
 		FlxG.camera.targetOffset.x = -35;
 		FlxG.camera.deadzone.x = 20;
 		
+		
+		
 		//FlxG.game.setFilters(Colors.gbFilter);
 		
 		FlxG.worldBounds.set(0, -10, 160 * 60, FlxG.height + 20);
@@ -139,10 +141,10 @@ class PlayState extends FlxState
 	
 	public function hitwall():Void
 	{
-		_wall._health -= 0.1;
+		_wall.health -= 0.1;
 		
 		//_wall.alpha -= 0.1 / (1 * (_bustedWalls/2));
-		if (_wall._health <= 0)
+		if (_wall.health <= 0)
 		{
 			_bustedWalls += 1;
 			FlxG.log.add(_bustedWalls);
@@ -153,11 +155,12 @@ class PlayState extends FlxState
 	public function _newWall():Void
 	{
 		FlxG.log.add("new wall");
+		_wall.health = 1 * (_bustedWalls/2);
 		FlxG.log.add(_wall.health + "no underscore");
 		FlxG.log.add(_wall._health + "underscpre");
 		_wall.x += FlxG.width;
 		//_wall.alpha = 1;
-		_wall._health = 1 * (_bustedWalls/2);
+		
 		//FlxTween.tween(_jill, {x: _jill.x + FlxG.width}, 1);
 		_wall.updateHitbox();
 	}
