@@ -71,6 +71,7 @@ class Jill extends FlxSprite
 	
 	private function colorStuff():Void
 	{
+		
 		//Black
 		replaceColor(0xFF231E21, FlxColor.fromString("#306230"));
 		
