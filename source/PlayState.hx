@@ -108,11 +108,6 @@ class PlayState extends FlxState
 		
 		//FlxG.game.setFilters(Colors.gbFilter);
 		
-		
-		
-		
-		
-		
 	}
 	
 	private function bgColors():Void
@@ -156,7 +151,7 @@ class PlayState extends FlxState
 		
 		FlxG.collide(_jill, _wall);
 		
-		if (FlxG.keys.justPressed.Z && !_justDied)
+		if (FlxG.keys.justPressed.Z && !_justDied && _jill.x >= _wall.x - _jill.width - 10)
 		{
 			hitwall();
 		}
@@ -210,6 +205,7 @@ class PlayState extends FlxState
 		if (_wall.health <= 0.5)
 		{
 			_bustedWalls += 1;
+			FlxG.sound.play("assets/sounds/wall.wav");
 			FlxG.log.add(_bustedWalls);
 			_newWall();
 		}

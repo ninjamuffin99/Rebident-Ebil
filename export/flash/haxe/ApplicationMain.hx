@@ -98,6 +98,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/outro.ase");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
 		urls.push ("assets/images/Sprite_BG.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -234,6 +238,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.SOUND);
 		
 		
+		urls.push ("assets/sounds/wall.wav");
+		types.push (lime.Assets.AssetType.SOUND);
+		
+		
 		urls.push ("flixel/sounds/beep.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
@@ -319,7 +327,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "362",
+			build: "379",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

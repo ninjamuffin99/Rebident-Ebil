@@ -104,6 +104,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -147,6 +149,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/Jill_Sprite_Wall_2.png", AssetType.IMAGE);
 		className.set ("assets/images/MedalIcons/jillSad.PNG", __ASSET__assets_images_medalicons_jillsad_png);
 		type.set ("assets/images/MedalIcons/jillSad.PNG", AssetType.IMAGE);
+		className.set ("assets/images/outro.ase", __ASSET__assets_images_outro_ase);
+		type.set ("assets/images/outro.ase", AssetType.BINARY);
 		className.set ("assets/images/Sprite_BG.png", __ASSET__assets_images_sprite_bg_png);
 		type.set ("assets/images/Sprite_BG.png", AssetType.IMAGE);
 		className.set ("assets/images/title.png", __ASSET__assets_images_title_png);
@@ -215,6 +219,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/sounds/video-game-pack.zip", AssetType.BINARY);
 		className.set ("assets/sounds/walk.wav", __ASSET__assets_sounds_walk_wav);
 		type.set ("assets/sounds/walk.wav", AssetType.SOUND);
+		className.set ("assets/sounds/wall.wav", __ASSET__assets_sounds_wall_wav);
+		type.set ("assets/sounds/wall.wav", AssetType.SOUND);
 		className.set ("flixel/sounds/beep.mp3", __ASSET__flixel_sounds_beep_mp3);
 		type.set ("flixel/sounds/beep.mp3", AssetType.MUSIC);
 		className.set ("flixel/sounds/flixel.mp3", __ASSET__flixel_sounds_flixel_mp3);
@@ -300,6 +306,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/outro.ase";
+		path.set (id, id);
+		
+		type.set (id, AssetType.BINARY);
 		id = "assets/images/Sprite_BG.png";
 		path.set (id, id);
 		
@@ -436,6 +446,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.SOUND);
+		id = "assets/sounds/wall.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "flixel/sounds/beep.mp3";
 		path.set (id, id);
 		
@@ -528,6 +542,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/MedalIcons/jillSad.PNG", __ASSET__assets_images_medalicons_jillsad_png);
 		type.set ("assets/images/MedalIcons/jillSad.PNG", AssetType.IMAGE);
+		
+		className.set ("assets/images/outro.ase", __ASSET__assets_images_outro_ase);
+		type.set ("assets/images/outro.ase", AssetType.BINARY);
 		
 		className.set ("assets/images/Sprite_BG.png", __ASSET__assets_images_sprite_bg_png);
 		type.set ("assets/images/Sprite_BG.png", AssetType.IMAGE);
@@ -630,6 +647,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/sounds/walk.wav", __ASSET__assets_sounds_walk_wav);
 		type.set ("assets/sounds/walk.wav", AssetType.SOUND);
+		
+		className.set ("assets/sounds/wall.wav", __ASSET__assets_sounds_wall_wav);
+		type.set ("assets/sounds/wall.wav", AssetType.SOUND);
 		
 		className.set ("flixel/sounds/beep.mp3", __ASSET__flixel_sounds_beep_mp3);
 		type.set ("flixel/sounds/beep.mp3", AssetType.MUSIC);
@@ -1310,6 +1330,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_jillwall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_jill_sprite_wall_2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_medalicons_jillsad_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_outro_ase extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_sprite_bg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_title_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_wall_ase extends flash.utils.ByteArray { }
@@ -1344,6 +1365,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_zombie_moan_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_video_game_pack_zip extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_walk_wav extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_wall_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends flash.text.Font { }
@@ -1356,6 +1378,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:keep #if display private #end class __ASSET__assets_data_nintender__wip__ttf extends lime.text.Font { public function new () { super (); name = "Nintender"; } } 
+
+
 
 
 
@@ -1437,6 +1461,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/jillwall.png") #if display private #end class __ASSET__assets_images_jillwall_png extends lime.graphics.Image {}
 @:image("assets/images/Jill_Sprite_Wall_2.png") #if display private #end class __ASSET__assets_images_jill_sprite_wall_2_png extends lime.graphics.Image {}
 @:image("assets/images/MedalIcons/jillSad.PNG") #if display private #end class __ASSET__assets_images_medalicons_jillsad_png extends lime.graphics.Image {}
+@:file("assets/images/outro.ase") #if display private #end class __ASSET__assets_images_outro_ase extends lime.utils.Bytes {}
 @:image("assets/images/Sprite_BG.png") #if display private #end class __ASSET__assets_images_sprite_bg_png extends lime.graphics.Image {}
 @:image("assets/images/title.png") #if display private #end class __ASSET__assets_images_title_png extends lime.graphics.Image {}
 @:file("assets/images/wall.ase") #if display private #end class __ASSET__assets_images_wall_ase extends lime.utils.Bytes {}
@@ -1471,6 +1496,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/sounds/Video Game Pack/Zombie moan.wav") #if display private #end class __ASSET__assets_sounds_video_game_pack_zombie_moan_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/video-game-pack.zip") #if display private #end class __ASSET__assets_sounds_video_game_pack_zip extends lime.utils.Bytes {}
 @:file("assets/sounds/walk.wav") #if display private #end class __ASSET__assets_sounds_walk_wav extends lime.utils.Bytes {}
+@:file("assets/sounds/wall.wav") #if display private #end class __ASSET__assets_sounds_wall_wav extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/beep.mp3") #if display private #end class __ASSET__flixel_sounds_beep_mp3 extends lime.utils.Bytes {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/sounds/flixel.mp3") #if display private #end class __ASSET__flixel_sounds_flixel_mp3 extends lime.utils.Bytes {}
 @:font("C:/HaxeToolkit/haxe/lib/flixel/4,3,0/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
