@@ -21,8 +21,6 @@ class Jill extends FlxSprite
 		animation.add("wall", [1, 2], 6, false);
 		animation.play("idle");
 		drag.x = 50;
-		
-		colorStuff();
 	}
 	override public function update(elapsed:Float):Void 
 	{
@@ -31,7 +29,6 @@ class Jill extends FlxSprite
 		{
 			FlxG.camera.antialiasing = !FlxG.camera.antialiasing;
 		}
-		
 		
 		if (FlxG.keys.justPressed.X && !FlxG.keys.pressed.Z)
 		{
@@ -64,19 +61,6 @@ class Jill extends FlxSprite
 			
 		}
 		super.update(elapsed);
-	}
-	
-	private function colorStuff():Void
-	{
-		
-		//Black
-		replaceColor(0xFF231E21, FlxColor.fromString("#306230"));
-		
-		//Blue
-		replaceColor(0xFF0078AD, FlxColor.fromString("#8bac0f"), false);
-		
-		//Pink
-		replaceColor(0xFFFD8C93, FlxColor.fromString("#9bbc0f"));
 	}
 	
 }

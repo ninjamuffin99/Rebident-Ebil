@@ -38,7 +38,7 @@ class PlayState extends FlxState
 		
 		FlxG.sound.playMusic("assets/music/Resident Evil GBC Music full.mp3");
 		FlxG.sound.music.play();
-		FlxG.camera.bgColor = Colors.gb3;
+		
 		
 		_bg = new FlxSprite(0 - 160, 0);
 		_bg.loadGraphic("assets/images/bg.png", false, 320, 144);
@@ -57,21 +57,6 @@ class PlayState extends FlxState
 		add(_jill);
 		
 		_ded = new FlxSprite(0, 0);
-		_ded.loadGraphic("assets/images/zombieBite.png", true, 91, 102);
-		_ded.animation.add("ded", [0, 0, 1], 3, false);
-		
-		//Jills colors
-		_ded.replaceColor(0xFF231E21, FlxColor.fromString("#306230"));
-		_ded.replaceColor(0xFF0078AD, FlxColor.fromString("#8bac0f"));
-		_ded.replaceColor(0xFF0079AD, FlxColor.fromString("#8bac0f"));
-		_ded.replaceColor(0xFFFD8C93, FlxColor.fromString("#9bbc0f"));
-		//Zombie Colors
-		_ded.replaceColor(0xFF231e21, Colors.gb2);
-		_ded.replaceColor(0xFF15aa00, Colors.gb1);
-		_ded.replaceColor(0xFF14aa00, Colors.gb1);
-		_ded.replaceColor(0xFFb1d284, Colors.gb0);
-		
-		
 		add(_ded);
 		_ded.visible = false;
 		
@@ -96,7 +81,6 @@ class PlayState extends FlxState
 		add(_fg);
 		
 		
-		
 		bgColors();
 		
 		FlxG.camera.follow(_jill, NO_DEAD_ZONE, 0.5);
@@ -112,34 +96,141 @@ class PlayState extends FlxState
 	
 	private function bgColors():Void
 	{
-		//Black
-		_bg.replaceColor(0xFF000000, Colors.gb3);
-		_wall.replaceColor(0xFF000000, Colors.gb3);
-		_fg.replaceColor(0xFF000000, Colors.gb3);
+		if (!Colors._oldColors)
+		{
+			//JILL
+			//Black
+			_jill.replaceColor(0xFF231E21, Colors.gb2);
+			
+			//Blue
+			_jill.replaceColor(0xFF0078AD, Colors.gb1);
+			
+			//Pink
+			_jill.replaceColor(0xFFFD8C93, Colors.gb0);
+			
+			
+			//ZOmbie
+			//Black
+			_zombie.replaceColor(0xFF231e21, Colors.gb2);
+			
+			//Darkl Green
+			_zombie.replaceColor(0xFF15aa00, Colors.gb1);
+			
+			//pretty much same shade of dark green
+			_zombie.replaceColor(0xFF14aa00, Colors.gb1);
+			
+			//Light green
+			_zombie.replaceColor(0xFFb1d284, Colors.gb0);
+			
+			
+			//Black
+			_bg.replaceColor(0xFF000000, Colors.gb3);
+			_wall.replaceColor(0xFF000000, Colors.gb3);
+			_fg.replaceColor(0xFF000000, Colors.gb3);
+			
+			//dark brown
+			_bg.replaceColor(0xFF640000, Colors.gb2);
+			_wall.replaceColor(0xFF640000, Colors.gb2);
+			_fg.replaceColor(0xFF640000, Colors.gb2);
+			
+			//brown
+			_bg.replaceColor(0xFF803600, Colors.gb1);
+			_bg.replaceColor(0xFF803700, Colors.gb1);
+			_bg.replaceColor(0xFF775100, Colors.gb1);
+			
+			_wall.replaceColor(0xFF803600, Colors.gb1);
+			_wall.replaceColor(0xFF803700, Colors.gb1);
+			_wall.replaceColor(0xFF775100, Colors.gb1);
+			
+			_fg.replaceColor(0xFF803600, Colors.gb1);
+			_fg.replaceColor(0xFF803700, Colors.gb1);
+			_fg.replaceColor(0xFF775100, Colors.gb1);
+			
+			//light brown
+			_bg.replaceColor(0xFF805e58, Colors.gb0);
+			_wall.replaceColor(0xFF805e58, Colors.gb0);
+			_fg.replaceColor(0xFF805e58, Colors.gb0);
+			
+			//Jills colors
+			_ded.replaceColor(0xFF231E21, FlxColor.fromString("#306230"));
+			_ded.replaceColor(0xFF0078AD, FlxColor.fromString("#8bac0f"));
+			_ded.replaceColor(0xFF0079AD, FlxColor.fromString("#8bac0f"));
+			_ded.replaceColor(0xFFFD8C93, FlxColor.fromString("#9bbc0f"));
+			//Zombie Colors
+			_ded.replaceColor(0xFF231e21, Colors.gb2);
+			_ded.replaceColor(0xFF15aa00, Colors.gb1);
+			_ded.replaceColor(0xFF14aa00, Colors.gb1);
+			_ded.replaceColor(0xFFb1d284, Colors.gb0);
+			
+			FlxG.camera.bgColor = Colors.gb3;
+		}
 		
-		//dark brown
-		_bg.replaceColor(0xFF640000, Colors.gb2);
-		_wall.replaceColor(0xFF640000, Colors.gb2);
-		_fg.replaceColor(0xFF640000, Colors.gb2);
-		
-		//brown
-		_bg.replaceColor(0xFF803600, Colors.gb1);
-		_bg.replaceColor(0xFF803700, Colors.gb1);
-		_bg.replaceColor(0xFF775100, Colors.gb1);
-		
-		_wall.replaceColor(0xFF803600, Colors.gb1);
-		_wall.replaceColor(0xFF803700, Colors.gb1);
-		_wall.replaceColor(0xFF775100, Colors.gb1);
-		
-		_fg.replaceColor(0xFF803600, Colors.gb1);
-		_fg.replaceColor(0xFF803700, Colors.gb1);
-		_fg.replaceColor(0xFF775100, Colors.gb1);
-		
-		//light brown
-		_bg.replaceColor(0xFF805e58, Colors.gb0);
-		_wall.replaceColor(0xFF805e58, Colors.gb0);
-		_fg.replaceColor(0xFF805e58, Colors.gb0);
-		
+		else
+		{
+			//JILL
+			//Black
+			_jill.replaceColor(Colors.gb2, 0xFF231E21);
+			
+			//Blue
+			_jill.replaceColor(Colors.gb1, 0xFF0078AD);
+			
+			//Pink
+			_jill.replaceColor(Colors.gb0, 0xFFFD8C93);
+			
+			//ZOmbie
+			//Black
+			_zombie.replaceColor(Colors.gb2, 0xFF231e21);
+			
+			//Darkl Green
+			_zombie.replaceColor(Colors.gb1, 0xFF15aa00);
+			
+			//pretty much same shade of dark green
+			_zombie.replaceColor(Colors.gb1, 0xFF14aa00);
+			
+			//Light green
+			_zombie.replaceColor(Colors.gb0, 0xFFb1d284);
+			
+			//Black
+			_bg.replaceColor(Colors.gb3, 0xFF000000);
+			_wall.replaceColor( Colors.gb3, 0xFF000000);
+			_fg.replaceColor(Colors.gb3, 0xFF000000);
+			
+			//dark brown
+			_bg.replaceColor(Colors.gb2, 0xFF640000);
+			_wall.replaceColor(Colors.gb2, 0xFF640000);
+			_fg.replaceColor(Colors.gb2, 0xFF640000);
+			
+			//brown
+			_bg.replaceColor(Colors.gb1, 0xFF803600);
+			_bg.replaceColor(Colors.gb1, 0xFF803700);
+			_bg.replaceColor(Colors.gb1, 0xFF775100);
+			
+			_wall.replaceColor(Colors.gb1, 0xFF803600);
+			_wall.replaceColor(Colors.gb1, 0xFF803700);
+			_wall.replaceColor(Colors.gb1, 0xFF775100);
+			
+			_fg.replaceColor(Colors.gb1, 0xFF803600);
+			_fg.replaceColor(Colors.gb1, 0xFF803700);
+			_fg.replaceColor(Colors.gb1, 0xFF775100);
+			
+			//light brown
+			_bg.replaceColor(Colors.gb0, 0xFF805e58);
+			_wall.replaceColor(Colors.gb0, 0xFF805e58);
+			_fg.replaceColor(Colors.gb0, 0xFF805e58);
+			
+			//Jills colors
+			_ded.replaceColor(Colors.gb2, 0xFF231E21);
+			_ded.replaceColor(Colors.gb1, 0xFF0078AD);
+			_ded.replaceColor(Colors.gb1, 0xFF0079AD);
+			_ded.replaceColor(Colors.gb0, 0xFFFD8C93);
+			//Zombie Colors
+			_ded.replaceColor(Colors.gb2, 0xFF231e21);
+			_ded.replaceColor(Colors.gb1, 0xFF15aa00);
+			_ded.replaceColor(Colors.gb1, 0xFF14aa00);
+			_ded.replaceColor(Colors.gb0, 0xFFb1d284);
+			
+			FlxG.camera.bgColor = FlxColor.BLACK;
+		}
 	}
 
 	override public function update(elapsed:Float):Void
@@ -162,6 +253,14 @@ class PlayState extends FlxState
 			FlxG.sound.play("assets/sounds/Video Game Pack/konami pause.wav");
 		}
 		
+		if (FlxG.keys.justPressed.S)
+		{
+			Colors._oldColors = !Colors._oldColors;
+			FlxG.camera.flash(FlxColor.WHITE, 0.2);
+			FlxG.sound.play("assets/sounds/colorSwap.wav");
+			bgColors();
+		}
+		
 		if (_zombie.x >= _jill.x - 30)
 		{
 			_jill.visible = false;
@@ -173,6 +272,8 @@ class PlayState extends FlxState
 			
 			if (!_justDied)
 			{
+				_ded.loadGraphic("assets/images/zombieBite.png", true, 91, 102);
+				_ded.animation.add("ded", [0, 0, 1], 3, false);
 				_ded.animation.play("ded");
 				if (_bustedWalls < 1)
 				{
@@ -200,6 +301,7 @@ class PlayState extends FlxState
 	public function hitwall():Void
 	{
 		_wall.health -= 0.1;
+		FlxG.sound.play("assets/sounds/smackLow.wav");
 		
 		_wall.alpha -= 0.1 / (1 * (_bustedWalls/5));
 		if (_wall.health <= 0.5)

@@ -106,6 +106,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -181,10 +183,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/music/titleScreen.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/bootSOund.mp3", __ASSET__assets_sounds_bootsound_mp3);
 		type.set ("assets/sounds/bootSOund.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/colorSwap.wav", __ASSET__assets_sounds_colorswap_wav);
+		type.set ("assets/sounds/colorSwap.wav", AssetType.SOUND);
 		className.set ("assets/sounds/gameOver.mp3", __ASSET__assets_sounds_gameover_mp3);
 		type.set ("assets/sounds/gameOver.mp3", AssetType.MUSIC);
 		className.set ("assets/sounds/jillBounce.mp3", __ASSET__assets_sounds_jillbounce_mp3);
 		type.set ("assets/sounds/jillBounce.mp3", AssetType.MUSIC);
+		className.set ("assets/sounds/smackLow.wav", __ASSET__assets_sounds_smacklow_wav);
+		type.set ("assets/sounds/smackLow.wav", AssetType.SOUND);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
 		className.set ("assets/sounds/titleBit.wav", __ASSET__assets_sounds_titlebit_wav);
@@ -370,6 +376,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/colorSwap.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/gameOver.mp3";
 		path.set (id, id);
 		
@@ -378,6 +388,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "assets/sounds/smackLow.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		id = "assets/sounds/sounds-go-here.txt";
 		path.set (id, id);
 		
@@ -591,11 +605,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/sounds/bootSOund.mp3", __ASSET__assets_sounds_bootsound_mp3);
 		type.set ("assets/sounds/bootSOund.mp3", AssetType.MUSIC);
 		
+		className.set ("assets/sounds/colorSwap.wav", __ASSET__assets_sounds_colorswap_wav);
+		type.set ("assets/sounds/colorSwap.wav", AssetType.SOUND);
+		
 		className.set ("assets/sounds/gameOver.mp3", __ASSET__assets_sounds_gameover_mp3);
 		type.set ("assets/sounds/gameOver.mp3", AssetType.MUSIC);
 		
 		className.set ("assets/sounds/jillBounce.mp3", __ASSET__assets_sounds_jillbounce_mp3);
 		type.set ("assets/sounds/jillBounce.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sounds/smackLow.wav", __ASSET__assets_sounds_smacklow_wav);
+		type.set ("assets/sounds/smackLow.wav", AssetType.SOUND);
 		
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
@@ -1346,8 +1366,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_titlescreen_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_bootsound_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_colorswap_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_gameover_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_jillbounce_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__assets_sounds_smacklow_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_titlebit_wav extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_titlething_mp3 extends flash.media.Sound { }
@@ -1378,6 +1400,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:keep #if display private #end class __ASSET__assets_data_nintender__wip__ttf extends lime.text.Font { public function new () { super (); name = "Nintender"; } } 
+
+
 
 
 
@@ -1477,8 +1501,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:file("assets/music/Resident Evil GBC Music full.wav") #if display private #end class __ASSET__assets_music_resident_evil_gbc_music_full_wav extends lime.utils.Bytes {}
 @:file("assets/music/titleScreen.mp3") #if display private #end class __ASSET__assets_music_titlescreen_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/bootSOund.mp3") #if display private #end class __ASSET__assets_sounds_bootsound_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/colorSwap.wav") #if display private #end class __ASSET__assets_sounds_colorswap_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/gameOver.mp3") #if display private #end class __ASSET__assets_sounds_gameover_mp3 extends lime.utils.Bytes {}
 @:file("assets/sounds/jillBounce.mp3") #if display private #end class __ASSET__assets_sounds_jillbounce_mp3 extends lime.utils.Bytes {}
+@:file("assets/sounds/smackLow.wav") #if display private #end class __ASSET__assets_sounds_smacklow_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
 @:file("assets/sounds/titleBit.wav") #if display private #end class __ASSET__assets_sounds_titlebit_wav extends lime.utils.Bytes {}
 @:file("assets/sounds/titleThing.mp3") #if display private #end class __ASSET__assets_sounds_titlething_mp3 extends lime.utils.Bytes {}

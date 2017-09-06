@@ -33,20 +33,13 @@ class GameOverState extends FlxState
 		_screen.loadGraphic("assets/images/gameover.png", true, 160, 144);
 		add(_screen);
 		_screen.animation.frameIndex = 0;
-		colorSwitch();
 		
-		/*_youDied = new FlxSprite(200, 0);
-		_youDied.makeGraphic(50, 50);
 		
-		_IDIOT = new FlxText(0, 100, 0, "IDIOT", 20);
-		_IDIOT.screenCenter(FlxAxes.X);
-		*/
 		_FAGGOT = new FlxText(0, 0, 0, "FAGGOT", 20);
-		_FAGGOT.color = Colors.gb0;
 		_FAGGOT.screenCenter();
 		
 		
-		bgColor = Colors.gb3;
+		colorSwitch();
 		
 		FlxG.fixedTimestep = false;
 		
@@ -68,23 +61,54 @@ class GameOverState extends FlxState
 	
 	private function colorSwitch():Void
 	{
-		//Black
-		_screen.replaceColor(0xFF000000, 0xFF0F380F);
-		
-		//Dark Red
-		_screen.replaceColor(0xFFAA0500, 0xFF306230);
-		
-		//Light red
-		_screen.replaceColor(0xFFFF0800, 0xFF9BBC0F);
-		
-		//Blue
-		_screen.replaceColor(0xFF0078ad, 0xFF306230);
-		
-		//Pink
-		_screen.replaceColor(0xFFfd8c93, 0xFF9bbc0f);
-		
-		//White
-		_screen.replaceColor(0xFFFFFFFF, 0xFF9bbc0f);
+		if (!Colors._oldColors)
+		{
+			//Black
+			_screen.replaceColor(0xFF000000, Colors.gb3);
+			
+			//Dark Red
+			_screen.replaceColor(0xFFAA0500, Colors.gb2);
+			
+			//Light red
+			_screen.replaceColor(0xFFFF0800, Colors.gb1);
+			
+			//Blue
+			_screen.replaceColor(0xFF0078ad, Colors.gb2);
+			
+			//Pink
+			_screen.replaceColor(0xFFfd8c93, Colors.gb1);
+			
+			//White
+			_screen.replaceColor(0xFFFFFFFF, Colors.gb1);
+			
+			_FAGGOT.color = Colors.gb0;
+			
+			bgColor = Colors.gb3;
+		}
+		else
+		{
+			//Black
+			_screen.replaceColor(Colors.gb3, 0xFF000000);
+			
+			//Dark Red
+			_screen.replaceColor(Colors.gb2, 0xFFAA0500);
+			
+			//Light red
+			_screen.replaceColor(Colors.gb1, 0xFFFF0800);
+			
+			//Blue
+			_screen.replaceColor(Colors.gb2, 0xFF0078ad);
+			
+			//Pink
+			_screen.replaceColor(Colors.gb1, 0xFFfd8c93);
+			
+			//White
+			_screen.replaceColor(Colors.gb1, 0xFFFFFFFF);
+			
+			_FAGGOT.color = FlxColor.WHITE;
+			
+			bgColor = 0xFF000000;
+		}
 	}
 	
 	override public function update(elapsed:Float):Void 
@@ -96,7 +120,13 @@ class GameOverState extends FlxState
 			finishTween();
 		}
 		
-		
+		if (FlxG.keys.justPressed.S)
+		{
+			Colors._oldColors = !Colors._oldColors;
+			FlxG.camera.flash(FlxColor.WHITE, 0.2);
+			FlxG.sound.play("assets/sounds/colorSwap.wav");
+			colorSwitch();
+		}
 		
 		tempTimer -= FlxG.elapsed;
 		if (tempTimer <= 0)
