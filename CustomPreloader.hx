@@ -19,7 +19,7 @@ class CustomPreloader extends FlxBasePreloader
 	
 	override function create():Void 
 	{
-		API.connect(root, "API ID", " ENC KEY");
+		API.connect(root, "API ID", "ENC KEY");
 		
 		if (API.isNewgrounds)
 		{

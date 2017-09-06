@@ -151,7 +151,7 @@ class FinishState extends FlxState
 		
 		if (FlxG.keys.justPressed.SPACE || FlxG.mouse.justPressed)
 		{
-			finishTween();
+			//finishTween();
 		}
 		
 		if (_cameraPan)

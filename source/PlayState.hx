@@ -284,6 +284,7 @@ class PlayState extends FlxState
 		
 		if (_jill.x >= FlxG.width * 15 && !_endlessMode)
 		{
+			API.unlockMedal("Oh YEAH");
 			FlxG.camera.fade(FlxColor.BLACK, 0.2, false, function(){FlxG.switchState(new FinishState()); });
 		}
 		
