@@ -57,6 +57,8 @@ class PlayState extends FlxState
 		add(_jill);
 		
 		_ded = new FlxSprite(0, 0);
+		_ded.loadGraphic("assets/images/zombieBite.png", true, 91, 102);
+		_ded.animation.add("ded", [0, 0, 1], 3, false);
 		add(_ded);
 		_ded.visible = false;
 		
@@ -251,9 +253,6 @@ class PlayState extends FlxState
 			
 			if (!_justDied)
 			{
-				_ded.loadGraphic("assets/images/zombieBite.png", true, 91, 102);
-				_ded.animation.add("ded", [0, 0, 1], 3, false);
-				
 				_ded.animation.play("ded");
 				if (_bustedWalls < 1)
 				{
