@@ -31,6 +31,7 @@ class PlayState extends FlxState
 	private var _justDied:Bool = false;
 	
 	private var _endlessMode:Bool = false;
+	private var _finishGameWidth:Float;
 	
 	override public function create():Void
 	{
@@ -74,10 +75,6 @@ class PlayState extends FlxState
 		_blood.velocity.set( -10, 15, 10, 24);
 		
 		
-		//126
-		
-		
-		
 		_fg = new FlxSprite((_wall.x + _wall.width) - FlxG.width * 2, 0);
 		_fg.loadGraphic("assets/images/fgWall.png", false, 334, 144);
 		add(_fg);
@@ -90,6 +87,7 @@ class PlayState extends FlxState
 		FlxG.camera.targetOffset.x = -35;
 		FlxG.camera.deadzone.x = 20;
 		
+		_finishGameWidth = FlxG.width * 2;
 		
 		
 		//FlxG.game.setFilters(Colors.gbFilter);
@@ -228,10 +226,18 @@ class PlayState extends FlxState
 			hitwall();
 		}
 		
-		if (FlxG.keys.justPressed.E)
+		if (FlxG.keys.justPressed.E && !_endlessMode && Colors._beatGame)
 		{
 			_endlessMode = !_endlessMode;
 			FlxG.sound.play("assets/sounds/Video Game Pack/konami pause.wav");
+		}
+		
+		if (API.username == "PhantomArcade")
+		{
+			if (FlxG.keys.justPressed.D)
+			{
+				FlxG.switchState(new FinishState());
+			}
 		}
 		
 		if (FlxG.keys.justPressed.S)
@@ -263,7 +269,9 @@ class PlayState extends FlxState
 				_blood.setPosition(_jill.x + 28, _jill.y + 37);
 				_blood.start(false, 0.02, 50);
 				_justDied = true;
-				API.postScore("ENDLESS MODE: Walls Busted", _bustedWalls);
+				
+				if (_endlessMode)
+					API.postScore("ENDLESS MODE: Walls Busted", _bustedWalls);
 			}
 			
 			
@@ -274,6 +282,11 @@ class PlayState extends FlxState
 			}
 		}
 		
+		if (_jill.x >= FlxG.width * 15 && !_endlessMode)
+		{
+			FlxG.camera.fade(FlxColor.BLACK, 0.2, false, function(){FlxG.switchState(new FinishState()); });
+		}
+		
 		super.update(elapsed);
 	}
 	
@@ -282,7 +295,13 @@ class PlayState extends FlxState
 		_wall.health -= 0.1;
 		FlxG.sound.play("assets/sounds/smackLow.wav");
 		
-		_wall.alpha -= 0.1 / (1 * (_bustedWalls/5));
+		if (_bustedWalls > 0)
+		{
+			_wall.alpha -= 0.1 / (1 * (_bustedWalls/5));
+		}
+		else
+			_wall.alpha -= 0.2;
+		
 		if (_wall.health <= 0.5)
 		{
 			_bustedWalls += 1;

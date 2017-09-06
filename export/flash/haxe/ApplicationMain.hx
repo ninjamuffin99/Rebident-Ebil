@@ -86,6 +86,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/jillSpriteWalk.ase");
+		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/jillSpriteWalk.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/jillwall.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -100,6 +108,14 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/outro.ase");
 		types.push (lime.Assets.AssetType.BINARY);
+		
+		
+		urls.push ("assets/images/outro1.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/outro2.png");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/Sprite_BG.png");
@@ -136,6 +152,10 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/zombiJillDed.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/music/541084_Corridors-of-Time.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("assets/music/704973_just-kickin-it-loop GBC edition.wav");
@@ -335,7 +355,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "411",
+			build: "470",
 			company: "ninjaMuffin",
 			file: "RebidentEbil",
 			fps: 60,

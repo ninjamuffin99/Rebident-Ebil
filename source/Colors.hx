@@ -31,6 +31,7 @@ class Colors
 	public static var gb3:Int = 0xFF0f380f;
 	
 	public static var _oldColors:Bool = false;
+	public static var _beatGame:Bool = false;
 
 	public function new() 
 	{
