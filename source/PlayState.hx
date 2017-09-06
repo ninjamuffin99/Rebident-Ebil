@@ -98,17 +98,6 @@ class PlayState extends FlxState
 	{
 		if (!Colors._oldColors)
 		{
-			//JILL
-			//Black
-			_jill.replaceColor(0xFF231E21, Colors.gb2);
-			
-			//Blue
-			_jill.replaceColor(0xFF0078AD, Colors.gb1);
-			
-			//Pink
-			_jill.replaceColor(0xFFFD8C93, Colors.gb0);
-			
-			
 			//ZOmbie
 			//Black
 			_zombie.replaceColor(0xFF231e21, Colors.gb2);
@@ -167,16 +156,6 @@ class PlayState extends FlxState
 		
 		else
 		{
-			//JILL
-			//Black
-			_jill.replaceColor(Colors.gb2, 0xFF231E21);
-			
-			//Blue
-			_jill.replaceColor(Colors.gb1, 0xFF0078AD);
-			
-			//Pink
-			_jill.replaceColor(Colors.gb0, 0xFFFD8C93);
-			
 			//ZOmbie
 			//Black
 			_zombie.replaceColor(Colors.gb2, 0xFF231e21);
@@ -274,6 +253,7 @@ class PlayState extends FlxState
 			{
 				_ded.loadGraphic("assets/images/zombieBite.png", true, 91, 102);
 				_ded.animation.add("ded", [0, 0, 1], 3, false);
+				
 				_ded.animation.play("ded");
 				if (_bustedWalls < 1)
 				{
