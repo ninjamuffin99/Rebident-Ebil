@@ -248,6 +248,11 @@ class PlayState extends FlxState
 			bgColors();
 		}
 		
+		if (_jill.x >= _wall.x)
+		{
+			_jill.x = _wall.x - _jill.width;
+		}
+		
 		if (_zombie.x >= _jill.x - 30)
 		{
 			_jill.visible = false;
