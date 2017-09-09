@@ -11,7 +11,8 @@ import flixel.tweens.FlxTween;
  */
 class Zombie extends FlxSprite 
 {
-
+	//The zombie class with simple logic!
+	
 	public function new(?X:Float=0, ?Y:Float=0) 
 	{
 		super(X, Y);

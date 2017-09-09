@@ -10,6 +10,10 @@ import com.newgrounds.components.*;
  */
 class CustomPreloader extends FlxBasePreloader 
 {
+	/* A preloader!
+	 * Does nothing except show a Newgrounds ad
+	 * 
+	*/
 
 	public function new(MinDisplayTime:Float=0, ?AllowedURLs:Array<String>) 
 	{
@@ -19,6 +23,7 @@ class CustomPreloader extends FlxBasePreloader
 	
 	override function create():Void 
 	{
+		//Connects to the Newgrounds API
 		API.connect(root, "API ID", "ENC KEY");
 		
 		if (API.isNewgrounds)
